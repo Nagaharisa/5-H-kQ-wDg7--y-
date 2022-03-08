@@ -13,14 +13,21 @@
 
 <body>
     <div id="kirjautuminen">
-        <p id="tervetuloa_teksti">Tervetuloa</p>
-        <form id="kirjautumis_lomake">
-            <input id="nimi" type="text" placeholder="Kirjoita nimesi" value="" />
-            <input id="kirjaudu_nappi" type="submit" value="Kirjaudu sisään" onClick="kirjaudu()" />
-        </form>
-        <form id="kirjaudu_ulos_lomake">
-            <input id="kirjaudu_ulos_nappi" type="submit" value="Kirjaudu ulos" onClick="kirjaudu_ulos()" />
-        </form>
+
+        <div>
+            <p id="tervetuloa_teksti">Tervetuloa</p>
+            <form id="kirjaudu_ulos_lomake">
+                <input id="kirjaudu_ulos_nappi" type="submit" value="Kirjaudu ulos" onClick="kirjaudu_ulos()" />
+            </form>
+        </div>
+
+        <div>
+            <form id="kirjautumis_lomake">
+                <input id="nimi" type="text" placeholder="Kirjoita nimesi" value="" />
+                <input id="kirjaudu_nappi" type="submit" value="Kirjaudu sisään" onClick="kirjaudu()" />
+            </form>
+        </div>
+
     </div>
 </body>
 
