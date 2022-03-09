@@ -160,22 +160,17 @@ p {
     margin-top: 20px;
 }
 
-.container-css {
-    align-items: center;
-    justify-content: center;
-    align-items: center;
-}
-.card-div {
-    align-items: center;
-    justify-content: center;
-    align-items: center;
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-}
-
 .card-img-top {
     height: 170px;
     width: 250px;
     margin: 0 auto;
+}
+
+.card-container {
+    display: grid;
+    width: 80vw;
+    height: 60vh;
+    margin: 0 auto;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    place-items: center;
 }
