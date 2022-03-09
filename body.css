@@ -4,9 +4,11 @@ body {
     /* Chrome 10-25, Safari 5.1-6 */
     background: -webkit-linear-gradient(-45deg, #db9705, #d40707);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    background: linear-gradient(-45deg, #ff670f, #36199e);
+    background: linear-gradient(-45deg, #ff670f, #4518e6);
     margin: 0;
     padding: 0;
+    height: 100vh;
+    width: 100vw;
 }
 
 h1 {
@@ -90,8 +92,10 @@ p {
 }
 
 .kirjautuminen button {
+    cursor: pointer;
     margin: 10px auto;
 }
+
 
 .bruh {
     width: fit-content;
@@ -101,3 +105,40 @@ p {
 #tervetuloTeksti {
     margin: 0;
 }
+
+.grid {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    place-items: center;
+}
+
+.sisäänKirjautuminen {
+    height: 26vh;
+    width: 20vw;
+    background-color: gray;
+    margin: 0 auto;
+    border-radius: 30px;
+}
+
+.sisäänKirjautuminen p {
+    color: white;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.kirjautumisLomake {
+    width: min-content;
+    margin: 0 auto;
+    text-align: center;  
+}
+
+.kirjautumisLomake input {
+    width: 177px;
+    margin: 10px;
+}
+.kirjautumisLomake button {
+    text-align: center;
+    margin-top: 30px;
+}
+
