@@ -168,9 +168,10 @@ p {
 
 .card-container {
     display: grid;
-    width: 80vw;
+    width: 90vw;
     height: 60vh;
-    margin: 0 auto;
-    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    margin: 20px auto;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 320px));
     place-items: center;
+    place-content: flex-start center;
 }
