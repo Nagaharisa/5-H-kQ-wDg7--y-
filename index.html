@@ -2,22 +2,42 @@
 <html lang="en">
 
 <head>
-    <head>
-        <title>The Rise of Soccer in The US</title>
-        <link href='body.css' rel='stylesheet'>
-      </head>
-      
-      <body>
-        <div class='content'>
-          <img src='./Kuvat/logo.jpg' width="60" height="60" class='writer-img'> 
-          <h1>outavaPizza</h1> 
-          <h2>Tietoa meidän pitsoistamme</h2>
-          <p> Kun pitsan paistaa, maun myös maistaa!</p>
-        </div>
-        <section class="pitsoja">
-            <label for="amount"></label>Kuinka monta pitsaa haluaisit ostaa?</label>
-            <input type="number" name="amount" id="amount" min="0" max="30"> 
-        </section>
+
+  <head>
+
+    <script src="Login.js"></script>
+
+    <title>The Rise of Soccer in The US</title>
+    <link href='body.css' rel='stylesheet'>
+  </head>
+
+<body>
+  <div class='content'>
+    <img src='./Kuvat/logo.jpg' width="60" height="60" class='writer-img'>
+    <h1>outavaPizza</h1>
+    <h2>Tietoa meidän pitsoistamme</h2>
+    <p> Kun pitsan paistaa, maun myös maistaa!</p>
+  </div>
+  <section class="pitsoja">
+    <label for="amount"></label>Kuinka monta pitsaa haluaisit ostaa?</label>
+    <input type="number" name="amount" id="amount" min="0" max="30">
+  </section>
+
+
+  <div class="kirjautuminen">
+    <p id="tervetuloTeksti" style="display: none;">Tervetuloa</p>
+
+    <form id="kirjautumisLomake">
+      <input type="text" id="nimi" placeholder="Syötä nimesi" maxlength="20" value="">
+      <br>
+      <div class="bruh">
+        <input type="submit" id="kirjauduNappi" value="Kirjaudu sisään" onclick="kirjaudu()">
+      </div>
+    </form>
+
+    <button style="display: none;" id="kirjauduUlos" onclick="kirjauduUlos()">Kirjaudu ulos</button>
+  </div>
+
 </body>
 
 </html>

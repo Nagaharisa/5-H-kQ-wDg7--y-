@@ -1,22 +1,28 @@
-document.addEventListener("DOMContentLoaded", hasSignedIN);
+document.addEventListener("DOMContentLoaded", onkoKirjautunut)
 
-function hasSignedIN(){
-    if(localStorage.getItem("kirjautunut") === "kylla") {
-    document.getElementById('tervetuloa_teksti').textContent += ` ${localStorage.getItem("nimi")}!`;
-    document.getElementById("kirjautumis_lomake").style.display = "none";
-    document.getElementById("kirjaudu_ulos_lomake");
-    } else 
-    {
-        document.getElementById("kirjaudu_ulos_lomake").style.display = "none";
+function onkoKirjautunut() {
+    let kirjautunut = localStorage.getItem("kirjautunut");
+
+    if (kirjautunut) {
+        document.getElementById("tervetuloTeksti").textContent += ` ${localStorage.getItem("nimi")}`
+        document.getElementById("kirjautumisLomake").style.display = "none"
+        document.getElementById("tervetuloTeksti").style.display = "block"
+        document.getElementById("kirjauduUlos").style.display = "block"
     }
 }
 
 function kirjaudu() {
-    localStorage.setItem("nimi", document.getElementById("nimi").value);
-    localStorage.setItem("kirjautunut","kylla");
-
+    if (document.getElementById("nimi").value == "") {
+        alert("Anna nimi")
+        return
+    }
+    localStorage.setItem("nimi", document.getElementById("nimi").value)
+    localStorage.setItem("kirjautunut", true)
 }
 
-function kirjaudu_ulos(){
-    localStorage.setItem("kirjautunut", "null");
+function kirjauduUlos() {
+    localStorage.clear()
+    document.getElementById("kirjautumisLomake").style.display = "block"
+    document.getElementById("tervetuloTeksti").style.display = "none"
+    document.getElementById("kirjauduUlos").style.display = "none"
 }
