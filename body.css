@@ -4,21 +4,30 @@ body {
     /* Chrome 10-25, Safari 5.1-6 */
     background: -webkit-linear-gradient(-45deg, #db9705, #d40707);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    background: linear-gradient(-45deg, #ff670f, #36199e);
+    background: linear-gradient(-45deg, #ff670f, #4518e6);
     margin: 0;
     padding: 0;
-  }
-  
-  h1 {
+    height: 100vh;
+    width: 100vw;
+}
+
+h1 {
     color: rgb(247, 211, 48) !important;
     font-size: 2em;
     padding-top: 40px;
     width: 100%;
     font-family: cursive;
+<<<<<<< HEAD
     text-align: center;
   }
   
   h2 {
+=======
+    text-align: left;
+}
+
+h2 {
+>>>>>>> 619fe7ec29dc719b43531bb85b4c46bd6552f110
     color: rgb(255, 0, 0);
     font-weight: 100;
     font-size: 22px;
@@ -27,9 +36,9 @@ body {
     text-align: left;
     width: 70%;
     font-family: cursive;
-  }
-  
-  p {
+}
+
+p {
     color: aliceblue;
     line-height: 1.3em;
     text-align: left;
@@ -37,20 +46,20 @@ body {
     font-family: cursive;
     font-size: 18px;
     font-weight: bold;
-  }
-  
-  .byline {
+}
+
+.byline {
     font-family: Helvetica;
     color: rgb(255, 255, 255);
     float: left;
     font-size: 14px;
     padding-left: 10px;
     text-transform: uppercase;
-  }
-  
-  .caption {
+}
+
+.caption {
     display: block;
-    font-family: 'Playfair Display', serif;
+    font-family: "Playfair Display", serif;
     font-size: 14px;
     font-style: italic;
     line-height: 14px;
@@ -61,25 +70,26 @@ body {
     width: 60%;
     background-color: white;
     color: rgb(255, 255, 255);
-  }
-  
-  .content {
+}
+
+.content {
     padding: 40px;
-  }
-  
-  .image {
-    background-image: url('https://content.codecademy.com/courses/freelance-1/unit-2/soccer.jpeg');
+}
+
+.image {
+    background-image: url("https://content.codecademy.com/courses/freelance-1/unit-2/soccer.jpeg");
     background-size: cover;
     background-position: center;
     height: 300px;
-  }
-  
-  .writer-img {
+}
+
+.writer-img {
     -webkit-box-shadow: 5px 0px 5px 0px rgba(0, 0, 50, 0.97);
     -moz-box-shadow: 5px 0px 5px 0px rgba(0, 0, 50, 0.97);
     box-shadow: 5px 0px 5px 0px rgba(0, 0, 50, 0.97);
     float: left;
     width: 50px;
+<<<<<<< HEAD
   }
   .card-text {
     color: rgb(0, 0, 0);
@@ -91,3 +101,65 @@ body {
   .card{
     margin: 10px;
   }
+=======
+}
+
+.kirjautuminen {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 10px;
+}
+
+.kirjautuminen button {
+    cursor: pointer;
+    margin: 10px auto;
+}
+
+
+.bruh {
+    width: fit-content;
+    margin: 10px auto;
+}
+
+#tervetuloTeksti {
+    margin: 0;
+}
+
+.grid {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    place-items: center;
+}
+
+.sisäänKirjautuminen {
+    height: 26vh;
+    width: 20vw;
+    background-color: gray;
+    margin: 0 auto;
+    border-radius: 30px;
+}
+
+.sisäänKirjautuminen p {
+    color: white;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.kirjautumisLomake {
+    width: min-content;
+    margin: 0 auto;
+    text-align: center;  
+}
+
+.kirjautumisLomake input {
+    width: 177px;
+    margin: 10px;
+}
+.kirjautumisLomake button {
+    text-align: center;
+    margin-top: 30px;
+}
+
+>>>>>>> 619fe7ec29dc719b43531bb85b4c46bd6552f110
