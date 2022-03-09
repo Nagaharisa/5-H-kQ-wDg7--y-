@@ -3,21 +3,84 @@
 
 <head>
     <head>
-        <title>The Rise of Soccer in The US</title>
+        <title>Tervetuloa Poutavapitsaan</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
         <link href='body.css' rel='stylesheet'>
       </head>
       
       <body>
-        <div class='content'>
-          <img src='logo.jpg' width="60" height="60" class='writer-img'> 
-          <h1>outavaPizza</h1> 
-          <h2>Tietoa meidän pitsoistamme</h2>
-          <p> Kun pitsan paistaa, maun myös maistaa!</p>
+
+
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img src='logo.jpg' width="60" height="60" class='writer-img'></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Dropdown
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link disabled">Disabled</a>
+                </li>
+              </ul>
+              <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+              </form>
+            </div>
+          </div>
+        </nav>
+        <h1>PoutavaPizza</h1> 
+        <div class="container">
+        <div class="row">
+          <div class="card" style="width: 18rem;">
+            <img src="pitsaa.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Superstinkyextreme</h5>
+              <p class="card-text">Herkullinen pitsa oliiveilla, pepperonilla sekä homejuustolla</p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">koko: suuri</li>
+              <li class="list-group-item">aika: 10 min</li>
+              <li class="list-group-item">Hinta: 12 euroa</li>
+              <button type="button" class="btn btn-success">Tilaa nyt!</button>
+            </ul>
+            </div>
+
+            <div class="card" style="width: 18rem;">
+              <img src="pizza.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">deliciousgourme</h5>
+                <p class="card-text">Maukasta pitsaa herkkusienillä,sipulilla ja tonnikalalla</p>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">koko: suuri</li>
+                <li class="list-group-item">aika: 17 min</li>
+                <li class="list-group-item">Hinta: 9.80 euroa</li>
+                <button type="button" class="btn btn-success">Tilaa nyt!</button>
+              </ul>
+              </div>
+            </div>
         </div>
-        <section class="pitsoja">
-            <label for="amount"></label>Kuinka monta pitsaa haluaisit ostaa?</label>
-            <input type="number" name="amount" id="amount" min="0" max="30"> 
-          </section>
+        
 </body>
 
 </html>

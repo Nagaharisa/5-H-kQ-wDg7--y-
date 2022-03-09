@@ -12,10 +12,10 @@ body {
   h1 {
     color: rgb(247, 211, 48) !important;
     font-size: 2em;
-    padding-top: 0px;
-    width: 70%;
+    padding-top: 40px;
+    width: 100%;
     font-family: cursive;
-    text-align: left;
+    text-align: center;
   }
   
   h2 {
@@ -41,7 +41,7 @@ body {
   
   .byline {
     font-family: Helvetica;
-    color: rgba(255, 255, 255, 0.5);
+    color: rgb(255, 255, 255);
     float: left;
     font-size: 14px;
     padding-left: 10px;
@@ -81,4 +81,13 @@ body {
     float: left;
     width: 50px;
   }
-  
+  .card-text {
+    color: rgb(0, 0, 0);
+  }
+  .card-title{
+    font-size: 25px;
+    font-weight: 800;
+  }
+  .card{
+    margin: 10px;
+  }
