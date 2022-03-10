@@ -18,7 +18,8 @@ function kirjaudu() {
     }
     localStorage.setItem("nimi", document.getElementById("nimi").value)
     localStorage.setItem("kirjautunut", true)
-    window.location.href = "/";
+    // window.location.href = "/";
+    window.location.href = "index.html";
 }
 
 function kirjauduUlos() {
