@@ -19,7 +19,7 @@ function kirjaudu() {
     localStorage.setItem("nimi", document.getElementById("nimi").value)
     localStorage.setItem("kirjautunut", true)
     // window.location.href = "/";
-    window.location.href = "index.html";
+    window.location.href = "pizzasivu.html";
 }
 
 function kirjauduUlos() {
@@ -28,3 +28,8 @@ function kirjauduUlos() {
     document.getElementById("tervetuloTeksti").style.display = "none"
     document.getElementById("kirjauduUlos").style.display = "none"
 }
+
+
+
+
+  
