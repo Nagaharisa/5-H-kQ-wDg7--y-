@@ -7,6 +7,7 @@ body {
     background: linear-gradient(-45deg, #ff670f, #4518e6);
     margin: 0;
     padding: 0;
+    height: fit-content;
 }
 
 h1 {
@@ -175,7 +176,7 @@ p {
 .card-container {
     display: grid;
     width: 90vw;
-    height: 60vh;
+    height: fit-content;
     margin: 20px auto;
     grid-template-columns: repeat(auto-fit, minmax(200px, 320px));
     place-items: center;
