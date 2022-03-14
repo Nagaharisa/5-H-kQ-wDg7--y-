@@ -1,5 +1,11 @@
-<select id="Osta">
-    <option value="1">Large</option>
-    <option value="2">Medium</option>
-    <option value="3">Small</option>
-</select>
+document.addEventListener("DOMContentLoaded", väliaikanen);
+
+function väliaikanen() {
+    console.log(localStorage.getItem("pitsa"))
+}
+
+function tilaa(tää) {
+    let pitsa = tää
+    localStorage.setItem("pitsa", pitsa)
+    window.location.href = "PoutavaSpesiaali.html"
+}

@@ -1,35 +1,54 @@
-document.addEventListener("DOMContentLoaded", onkoKirjautunut)
+let reg = 0;
+
+document.addEventListener("DOMContentLoaded", onkoKirjautunut);
 
 function onkoKirjautunut() {
     let kirjautunut = localStorage.getItem("kirjautunut");
 
     if (kirjautunut) {
-        document.getElementById("tervetuloTeksti").textContent += ` ${localStorage.getItem("nimi")}`
-        document.getElementById("kirjautumisLomake").style.display = "none"
-        document.getElementById("tervetuloTeksti").style.display = "block"
-        document.getElementById("kirjauduUlos").style.display = "block"
+        document.getElementById("nimi").value = localStorage.getItem("nimi");
+        document.getElementById("salasana").value = localStorage.getItem("salasana");
     }
 }
 
 function kirjaudu() {
-    if (document.getElementById("nimi").value == "") {
-        alert("Anna nimi")
-        return
+    if (
+        document.getElementById("nimi").value == "" ||
+        document.getElementById("salasana").value == ""
+    ) {
+        alert("Anna nimi ja salasana!");
+        return;
     }
-    localStorage.setItem("nimi", document.getElementById("nimi").value)
-    localStorage.setItem("kirjautunut", true)
-    // window.location.href = "/";
-    window.location.href = "pizzasivu.html";
+
+    if (document.getElementById("nimi").value == localStorage.getItem("nimi") &&
+        document.getElementById("salasana").value == localStorage.getItem("salasana")) {
+        window.location.href = "pizzasivu.html";
+    } else {
+        alert("Nimi tai salasana on väärin!");
+    }
 }
 
-function kirjauduUlos() {
-    localStorage.clear()
-    document.getElementById("kirjautumisLomake").style.display = "block"
-    document.getElementById("tervetuloTeksti").style.display = "none"
-    document.getElementById("kirjauduUlos").style.display = "none"
+function kirjauduUlos() {}
+
+function rekisteröidy() {
+    document.getElementById("kirjautuminen").innerText = "Rekisteröidy";
+    document.getElementById("kirjautumisNappi").style.display = "none";
+
+    if (reg == 1) {
+        if (
+            document.getElementById("nimi").value != "" &&
+            document.getElementById("salasana").value != ""
+        ) {
+            localStorage.setItem("nimi", document.getElementById("nimi").value);
+            localStorage.setItem(
+                "salasana",
+                document.getElementById("salasana").value
+            );
+            localStorage.setItem("kirjautunut", true);
+            window.location.href = "pizzasivu.html";
+        } else {
+            alert("Anna nimi ja salasana");
+        }
+    }
+    reg = 1;
 }
-
-
-
-
-  
