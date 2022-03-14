@@ -133,8 +133,8 @@ p {
 }
 
 .sisäänKirjautuminen {
-    height: 26vh;
-    width: 20vw;
+    height: 250px;
+    width: 300px;
     background-color: gray;
     margin: 0 auto;
     border-radius: 30px;
