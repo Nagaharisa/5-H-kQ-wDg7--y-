@@ -14,12 +14,12 @@
 <body>
     <div class="grid">
         <div class="sisäänKirjautuminen">
-            <p>Kirjaudu sisään</p>
+            <p id="kirjautuminen">Kirjaudu sisään</p>
             <div class="kirjautumisLomake">
                 <input type="text" name="nimi" id="nimi" placeholder="Nimi">
                 <input type="text" name="nimi" id="salasana" placeholder="Salasana">
-                <button onclick="kirjaudu()">Kirjaudu</button>
-                <button>Rekisteröidy</button>
+                <button onclick="kirjaudu()" id="kirjautumisNappi">Kirjaudu sisään</button>
+                <button onclick="rekisteröidy()" id="regNappi">Rekisteröidy</button>
             </div>
         </div>
     </div>
