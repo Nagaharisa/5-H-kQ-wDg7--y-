@@ -2,7 +2,15 @@ let reg = 0;
 
 document.addEventListener("DOMContentLoaded", onkoKirjautunut);
 
+/* async function häshi() {
+    _salasana = localStorage.getItem("salasana")
+    let response = await fetch(`https://api.hashify.net/hash/md5/hex?value=${_salasana}`)
+    data = await response.json();
+    console.log(data.Digest)
+} */ //Pitäskö laittaa emt kattoo kyl varmaa jossai vaihees jos jaksaa xd
+
 function onkoKirjautunut() {
+    
     let kirjautunut = localStorage.getItem("kirjautunut");
 
     if (kirjautunut) {
