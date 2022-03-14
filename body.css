@@ -1,10 +1,10 @@
 body {
     /* Old browsers */
-    background: #bbff00;
+    background: whitesmoke;
     /* Chrome 10-25, Safari 5.1-6 */
-    background: -webkit-linear-gradient(-45deg, #db9705, #d40707);
+    background: -webkit-linear-gradient(-45deg, #cd5c5c);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    background: linear-gradient(-45deg, #ff670f, #4518e6);
+    background: linear-gradient(#cd5c5c);
     margin: 0;
     padding: 0;
     min-height: 100vh;
@@ -12,7 +12,7 @@ body {
 }
 
 h1 {
-    color: rgb(12, 245, 82) !important;
+    color: rgb(0, 0, 0) !important;
     font-size: 2em;
     padding-top: 40px;
     padding-bottom: 20px;
@@ -26,7 +26,7 @@ h2 {
 }
 
 h2 {
-    color: rgb(7, 255, 234);
+    color: rgb(0, 0, 0);
     font-weight: 100;
     font-size: 22px;
     line-height: 24px;
@@ -76,6 +76,7 @@ p {
 }
 
 .image {
+    background-image: url("");
     background-size: cover;
     background-position: center;
     height: 300px;
@@ -138,12 +139,6 @@ p {
     margin: 0 auto;
     border-radius: 30px;
     padding-bottom: 20px;
-}
-
-#regNappi {
-    background-color: lime;
-    border: 1px solid black;
-    padding: 2px;
 }
 
 .sisäänKirjautuminen p {
