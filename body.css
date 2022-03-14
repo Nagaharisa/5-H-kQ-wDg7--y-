@@ -187,7 +187,7 @@ p {
 }
 .h3{
     text-align: center;
-    color: rgb(7, 255, 234);
+    color: rgb(0, 0, 0);
 }
 
 /* -----kotisivu  css ----------*/
@@ -215,11 +215,8 @@ p {
 .otayhteyttä-otsikko{
     padding-top: 20px;
     padding-bottom: 15px;
-    color: aqua;
+    color: rgb(0, 0, 0);
 }
 h5{
     text-align: center;
-}
-.checkbox{
-    color: aqua;
 }
