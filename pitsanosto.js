@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", väliaikanen);
 
 function väliaikanen() {
-    console.log(localStorage.getItem("pitsa"))
+    document.getElementById("pizza").innerText = localStorage.getItem("pitsa")
 }
 
 function tilaa(tää) {
