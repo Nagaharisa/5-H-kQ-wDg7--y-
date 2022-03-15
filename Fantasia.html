@@ -20,10 +20,12 @@
                 <p class="card-text">Valitse mitä ikinä haluat!<br>(4 ilmaista täytettä)<br>Pitsaan aina sisältyy: Pohja, juusto, ja tomaattikastike.</p>
                 <div class="text-center">
                     <p>Täytteet</p>
-                    <input type="checkbox" name="choice" value="1€" onchange="checkTotal()" /> Basilikaa <span
-                        class="fantasia">1€</span> <br />
-                    <input type="checkbox" name="choice" value="1€" onchange="checkTotal()" /> Sipulia <span
-                        class="fantasia">1€</span><br />
+                    <input type="checkbox" name="choice" value="" onchange="checkTotal()" /> Suuri<span
+                        class="fantasia"></span> <br />
+                    <input type="checkbox" name="choice" value="" onchange="checkTotal()" /> Medium <span
+                        class="fantasia"></span><br />
+                        <input type="checkbox" name="choice" value="" onchange="checkTotal()" /> Pieni <span
+                        class="fantasia"></span><br />
                 </div>
                     <div class="text-center">
                         <p>Täytteet</p>
@@ -64,7 +66,7 @@
                             box.style.display = 'inline';
                         });
                         document.listForm.total.value = '';
-                        var sum = 10;
+                        var sum = 14;
                         for (i = 0; i < document.listForm.choice.length; i++) {
                             if (document.listForm.choice[i].checked) {
                                 sum = sum + parseInt(document.listForm.choice[i].value);
