@@ -2,24 +2,22 @@ let reg = 0;
 
 document.addEventListener("DOMContentLoaded", onkoKirjautunut);
 
-/* async function häshi() {
-    _salasana = localStorage.getItem("salasana")
-    let response = await fetch(`https://api.hashify.net/hash/md5/hex?value=${_salasana}`)
-    data = await response.json();
-    console.log(data.Digest)
-} */ //Pitäskö laittaa emt kattoo kyl varmaa jossai vaihees jos jaksaa xd
+async function häsh(häshättävä) {
+    const res = await fetch(`https://api.hashify.net/hash/md5/hex?value=${häshättävä}`)
+    const data = await res.json()
+    return data.Digest
+}
 
-function onkoKirjautunut() {
+async function onkoKirjautunut() {
     
     let kirjautunut = localStorage.getItem("kirjautunut");
 
     if (kirjautunut) {
         document.getElementById("nimi").value = localStorage.getItem("nimi");
-        document.getElementById("salasana").value = localStorage.getItem("salasana");
     }
 }
 
-function kirjaudu() {
+async function kirjaudu() {
     if (
         document.getElementById("nimi").value == "" ||
         document.getElementById("salasana").value == ""
@@ -29,7 +27,7 @@ function kirjaudu() {
     }
 
     if (document.getElementById("nimi").value == localStorage.getItem("nimi") &&
-        document.getElementById("salasana").value == localStorage.getItem("salasana")) {
+        await häsh(document.getElementById("salasana").value) == localStorage.getItem("salasana")) {
         window.location.href = "pizzasivu.html";
     } else {
         alert("Nimi tai salasana on väärin!");
@@ -38,7 +36,7 @@ function kirjaudu() {
 
 function kirjauduUlos() {}
 
-function rekisteröidy() {
+async function rekisteröidy() {
     document.getElementById("kirjautuminen").innerText = "Rekisteröidy";
     document.getElementById("kirjautumisNappi").style.display = "none";
 
@@ -50,7 +48,7 @@ function rekisteröidy() {
             localStorage.setItem("nimi", document.getElementById("nimi").value);
             localStorage.setItem(
                 "salasana",
-                document.getElementById("salasana").value
+                await häsh(document.getElementById("salasana").value)
             );
             localStorage.setItem("kirjautunut", true);
             window.location.href = "pizzasivu.html";

@@ -7,8 +7,7 @@ body {
     background: linear-gradient(#cd5c5c);
     margin: 0;
     padding: 0;
-    min-height: 100vh;
-    max-height: fit-content;
+    height: minmax(100vh, fit-content);
 }
 
 h1 {
@@ -101,7 +100,7 @@ p {
     margin: 10px;
     width: 18rem;
     padding: 15px;
-    height: 520px;
+    height: minmax(390, auto);
 }
 
 .kirjautuminen {
@@ -149,7 +148,7 @@ p {
 
 .kirjautumisLomake {
     width: min-content;
-    margin: 0 auto ;
+    margin: 0 auto;
     text-align: center;
 }
 
@@ -173,7 +172,6 @@ p {
     width: 250px;
     margin: 0 auto;
     border-radius: 0.25rem;
-
 }
 
 .card-container {
@@ -185,26 +183,26 @@ p {
     place-items: center;
     place-content: flex-start center;
 }
-.h3{
+.h3 {
     text-align: center;
     color: rgb(0, 0, 0);
 }
 
 /* -----kotisivu  css ----------*/
 
-.SivuKuvat-div{
+.SivuKuvat-div {
     text-align: center;
     justify-content: center;
     display: flex;
 }
-.sivu-kuva{
+.sivu-kuva {
     margin: 10px;
 }
-.sivu-teksti p{
- font-size: 16px;
+.sivu-teksti p {
+    font-size: 16px;
 }
 
-.sivu-teksti{
+.sivu-teksti {
     margin-left: 20%;
     margin-right: 20%;
     padding-top: 20px;
@@ -212,11 +210,13 @@ p {
 
 /*---- otayhteyttäsivu -----*/
 
-.otayhteyttä-otsikko{
+.otayhteyttä-otsikko {
     padding-top: 20px;
     padding-bottom: 15px;
     color: rgb(0, 0, 0);
 }
-h5{
+h5 {
     text-align: center;
 }
+
+/*---- osto? -----*/
