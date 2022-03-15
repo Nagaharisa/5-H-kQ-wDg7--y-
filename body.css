@@ -17,7 +17,7 @@ h1 {
     padding-top: 40px;
     padding-bottom: 20px;
     width: 100%;
-    font-family: cursive;
+    font-family: Trebuchet MS, sans-serif;
     text-align: center;
 }
 
@@ -34,7 +34,7 @@ h2 {
     padding-top: 30px;
     text-align: left;
     width: 70%;
-    font-family: cursive;
+    font-family: Trebuchet MS, sans-serif;
 }
 
 p {
@@ -42,14 +42,14 @@ p {
     line-height: 1.3em;
     text-align: center;
     width: 100%;
-    font-family: cursive;
+    font-family: Trebuchet MS, sans-serif;
     font-size: 18px;
     font-weight: bold;
 }
 
 .byline {
     font-family: Helvetica;
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     float: left;
     font-size: 14px;
     padding-left: 10px;
@@ -135,7 +135,7 @@ p {
 .sisäänKirjautuminen {
     height: 250px;
     width: 300px;
-    background-color: gray;
+    background-color: rgb(182, 65, 65);
     margin: 0 auto;
     border-radius: 30px;
     padding-bottom: 20px;
