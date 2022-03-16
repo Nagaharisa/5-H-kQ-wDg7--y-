@@ -17,67 +17,92 @@
             <img src="./Kuvat/fanta.jpg" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title">Fantasia</h5>
-                <p class="card-text">Valitse mitä ikinä haluat!<br>(4 ilmaista täytettä)<br>Pitsaan aina sisältyy: Pohja, juusto, ja tomaattikastike.</p>
-                <div class="text-center">
-                    <p>Täytteet</p>
-                    <input type="checkbox" name="choice" value="" onchange="checkTotal()" /> Suuri<span
-                        class="fantasia"></span> <br />
-                    <input type="checkbox" name="choice" value="" onchange="checkTotal()" /> Medium <span
-                        class="fantasia"></span><br />
-                        <input type="checkbox" name="choice" value="" onchange="checkTotal()" /> Pieni <span
-                        class="fantasia"></span><br />
-                </div>
+                <p class="card-text">Valitse mitä ikinä haluat!<br>(4 ilmaista täytettä)<br>Pitsaan aina sisältyy:
+                    Pohja, juusto, ja tomaattikastike.</p>
+
                     <div class="text-center">
-                        <p>Täytteet</p>
-                        <input type="checkbox" name="choice" value="1€" onchange="checkTotal()" /> Basilikaa <span
-                            class="fantasia">1€</span> <br />
-                        <input type="checkbox" name="choice" value="1€" onchange="checkTotal()" /> Sipulia <span
-                            class="fantasia">1€</span><br />
-                        <input type="checkbox" name="choice" value="1€" onchange="checkTotal()" /> Paprikaa <span
-                            class="fantasia">1€</span><br />
-                        <input type="checkbox" name="choice" value="1€" onchange="checkTotal()" /> Kinkku <span
-                            class="fantasia">1€</span><br />
-                        <input type="checkbox" name="choice" value="1€" onchange="checkTotal()" /> Salami <span
-                            class="fantasia">1€</span><br />
-                        <input type="checkbox" name="choice" value="1€" onchange="checkTotal()" /> Kebab <span
-                            class="fantasia">1€</span><br />
-                        <input type="checkbox" name="choice" value="1€" onchange="checkTotal()" /> Valkosipuli <span
-                            class="fantasia">1€</span><br />
-                        <input type="checkbox" name="choice" value="1€" onchange="checkTotal()" /> Sinihomejuusto
-                        <span class="fantasia">1€</span><br />
-                        <input type="checkbox" name="choice" value="1€" onchange="checkTotal()" /> Pekoni <span
-                            class="fantasia">1€</span><br />
-                    </div>
-                    <div class="mt-3 text-center ">
-                        <h6>Pizzan summa täytteillä</h5>
-                            Summa: <input type="text" size="2" name="total" value="14">€</input>
-                    </div>
+                    <h3 class="tieto">Koko</h3>
+                    <input type="radie" name="koko" value="" onchange="checkTotal()" /> Suuri<span
+                    class="fantasia"></span> <br />
+                    <input type="radio" name="koko" value="" onchange="checkTotal()" /> Medium <span
+                    class="fantasia"></span><br />
+                    <input type="radio" name="koko" value="" onchange="checkTotal()" /> Pieni <span
+                    class="fantasia"></span><br />
+                    <h3 class="tieto">Pohja</h3>
+                    <input type="radio" name="pohja" value="0" checked onchange="checkTotal(this)" /> Normaali
+                    <br>
+                    <input type="radio" name="pohja" value="1" onchange="checkTotal(this)" id="gluteeni"/> Gluteeniton <span
+                    class="fantasia">1€</span><br />
+                </div>
+
+                <div class="text-center">
+                    <h3 class="tieto">Täytteet</h3>
+                    <input type="checkbox" name="täyte" value="1" onchange="checkTotal(this)" /> Basilikaa <span
+                        class="fantasia">1€</span> <br />
+                    <input type="checkbox" name="täyte" value="1" onchange="checkTotal(this)" /> Sipulia <span
+                        class="fantasia">1€</span><br />
+                    <input type="checkbox" name="täyte" value="1" onchange="checkTotal(this)" /> Paprikaa <span
+                        class="fantasia">1€</span><br />
+                    <input type="checkbox" name="täyte" value="1" onchange="checkTotal(this)" /> Kinkku <span
+                        class="fantasia">1€</span><br />
+                    <input type="checkbox" name="täyte" value="1" onchange="checkTotal(this)" /> Salami <span
+                        class="fantasia">1€</span><br />
+                    <input type="checkbox" name="täyte" value="1" onchange="checkTotal(this)" /> Kebab <span
+                        class="fantasia">1€</span><br />
+                    <input type="checkbox" name="täyte" value="1" onchange="checkTotal(this)" /> Valkosipuli <span
+                        class="fantasia">1€</span><br />
+                    <input type="checkbox" name="täyte" value="1" onchange="checkTotal(this)" /> Sinihomejuusto
+                    <span class="fantasia">1€</span><br />
+                    <input type="checkbox" name="täyte" value="1" onchange="checkTotal(this)" /> Pekoni <span
+                        class="fantasia">1€</span><br />
+                    <input type="checkbox" name="täyte" value="1" onchange="checkTotal(this)" /> Jäävuorisalaatti <span
+                        class="fantasia">1€</span><br />
+                    <input type="checkbox" name="täyte" value="1" onchange="checkTotal(this)" /> Makkara <span
+                        class="fantasia">1€</span><br />
+                </div>
+                <div class="text-center">
+                    <h6 class="tieto">Kastike</h6>
+                    <input type="radio" name="kastike" value="0" onchange="checkTotal(this)" checked /> Ei kastiketta
+                    <br>
+                    <input type="radio" name="kastike" value="1" onchange="checkTotal(this)" id="valkosipuli"/> Valkosipuli <span
+                        class="fantasia">1€</span><br />
+                </div>
+                <div class="mt-3 text-center ">
+                    <h6>Pizzan summa täytteillä</h5>
+                        Summa: <input type="text" size="2" name="summa" id="summa" value="14"></input>€
+                </div>
                 </form>
             </div>
 
             <script type="text/javascript">
-                let täytteitä = 0;
-                function checkTotal() {
-
-                    if (täytteitä == 4) {
-                        const boxes = document.querySelectorAll('.fantasia');
-
-                        boxes.forEach(box => {
-                            box.style.display = 'inline';
-                        });
-                        document.listForm.total.value = '';
-                        var sum = 14;
-                        for (i = 0; i < document.listForm.choice.length; i++) {
-                            if (document.listForm.choice[i].checked) {
-                                sum = sum + parseInt(document.listForm.choice[i].value);
+                
+                let täytteet = 0;
+                let summa = parseInt(document.getElementById("summa").value);
+                function checkTotal(a) {
+                    
+                    if (a.name == "täyte") {
+                        if(a.checked) {
+                            if(täytteet >= 4) {
+                                summa += parseInt(a.value);
+                                täytteet += 1
+                            } else {
+                                täytteet += 1
                             }
+                        } else {
+                            summa -= parseInt(a.value)
+                            täytteet -= 1
                         }
-                        if (sum < 14) {
-                            sum = 14;
-                        }
-                        document.listForm.total.value = sum;
-                    } else {
-                        täytteitä += 1
                     }
+
+                    if (summa < 14) {
+                        summa = 14;
+                        if(document.getElementById("gluteeni").checked) {
+                            summa += 1
+                        }
+                        if(document.getElementById("valkosipuli").checked) {
+                            summa += 1
+                        }
+                    }
+                    document.getElementById("summa").value = summa;
                 }
             </script>
