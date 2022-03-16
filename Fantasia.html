@@ -22,9 +22,9 @@
 
                     <div class="text-center">
                     <h3 class="tieto">Koko</h3>
-                    <input type="radie" name="koko" value="" onchange="checkTotal()" /> Suuri<span
+                    <input type="radio" name="koko" value="" onchange="checkTotal()" /> Suuri<span
                     class="fantasia"></span> <br />
-                    <input type="radio" name="koko" value="" onchange="checkTotal()" /> Medium <span
+                    <input type="radio" name="koko" value="" onchange="checkTotal()" checked/> Medium <span
                     class="fantasia"></span><br />
                     <input type="radio" name="koko" value="" onchange="checkTotal()" /> Pieni <span
                     class="fantasia"></span><br />
@@ -61,7 +61,7 @@
                         class="fantasia">1€</span><br />
                 </div>
                 <div class="text-center">
-                    <h6 class="tieto">Kastike</h6>
+                    <h3 class="tieto">Kastike</h3>
                     <input type="radio" name="kastike" value="0" onchange="checkTotal(this)" checked /> Ei kastiketta
                     <br>
                     <input type="radio" name="kastike" value="1" onchange="checkTotal(this)" id="valkosipuli"/> Valkosipuli <span
@@ -75,7 +75,7 @@
             </div>
 
             <script type="text/javascript">
-                
+
                 let täytteet = 0;
                 let summa = parseInt(document.getElementById("summa").value);
                 function checkTotal(a) {
