@@ -52,7 +52,7 @@
             <div class="card-body">
                 <h5 class="card-title">Fantasia</h5>
                 <p class="card-text">Valitse mitä ikinä haluat!<br>(4 ilmaista täytettä)<br>Pitsaan aina sisältyy:
-                    Pohja, juusto, ja tomaattikastike.</p>
+                    Pohja, juusto ja tomaattikastike.</p>
 
                 <div class="kattoo">
 
@@ -115,8 +115,8 @@
                         Mozzarella <span class="fantasia">2€</span><br />
                         <input type="radio" name="juusto" value="2" onchange="checkTotal(this)" />
                         Parmesaani <span class="fantasia">2€</span><br />
-                        <input type="radio" name="juusto" value="2" onchange="checkTotal(this)" />
-                        Mascarpone <span class="fantasia">2€</span><br />
+                        <input type="radio" name="juusto" value="3" onchange="checkTotal(this)" />
+                        Mascarpone <span class="fantasia">3€</span><br />
                     </div>
                 </div>
 
@@ -130,6 +130,8 @@
 
             <script type="text/javascript">
 
+
+                let gluteeni = false
                 let koko = 0;
                 let juusto = 0;
                 let täytteet = 0;
@@ -164,7 +166,13 @@
 
                     if (a.name == "kastike" || a.name == "pohja") {
                         summa += parseInt(a.value);
+                        if(a.name == "pohja"){
+                            gluteeni = !gluteeni
+                        }
                     }
+
+                    //valmistus = 7 + täytteet * 1 + if gluteeni + 3 
+                    //toimitus
 
                     if (summa < 14) {
                         summa = 14;
