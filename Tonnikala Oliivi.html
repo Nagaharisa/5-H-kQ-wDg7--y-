@@ -18,7 +18,7 @@
       <div class="card-body">
         <h5 class="card-title">Seafood</h5>
         <p class="card-text">Katkarapu, Oliiveja ja Tonnikalaa</p>
-        <p>Pizzan alkuperäinen hinta on 16€</p>
+        <p>Pizzan alkuperäinen hinta on 12€</p>
         <form name="listForm">
           <div class="text-center">
             <input type="checkbox"/>Gluteeniton<br/>
@@ -38,7 +38,7 @@
       <script type="text/javascript">
         function checkTotal() {
           document.listForm.total.value = '';
-          var sum = 16;
+          var sum = 12;
           for (i=0;i<document.listForm.choice.length;i++) {
             if (document.listForm.choice[i].checked) {
               sum = sum + parseInt(document.listForm.choice[i].value);
