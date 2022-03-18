@@ -1,16 +1,23 @@
+let valimatka;
+
 async function välimatka(osoite) {
-    let res = await fetch(`http://api.positionstack.com/v1/forward?access_key=9d0974d5f694e55ec3d9320c7090a60d&country=FI&region=Kerava&query=${encodeURIComponent(osoite)}`);
+    let res = await fetch(
+        `http://api.positionstack.com/v1/forward?access_key=9d0974d5f694e55ec3d9320c7090a60d&country=FI&query=${encodeURIComponent(
+            osoite
+        )}`
+    );
     let data = await res.json();
+    for (let i = 0; i < data.data.length; i++) {
+        if (data.data[i].administrative_area == "Kerava")
+            valimatka = await distance(
+                60.40515530242967,
+                25.09979260638944,
+                data.data[i].latitude,
+                data.data[i].longitude
+            );
+        continue;
+    }
 
-    let valimatka = await distance(
-        60.40515530242967,
-        25.09979260638944,
-        data.data[0].latitude,
-        data.data[0].longitude
-    )
-
-    console.log(valimatka.toFixed(2));
-    
     return valimatka.toFixed(2);
 }
 
