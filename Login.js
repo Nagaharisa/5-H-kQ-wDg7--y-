@@ -28,7 +28,7 @@ async function kirjaudu() {
 
     if (document.getElementById("nimi").value == localStorage.getItem("nimi") &&
         await häsh(document.getElementById("salasana").value) == localStorage.getItem("salasana")) {
-        window.location.href = "pizzasivu.html";
+        window.location.href = "kotisivu.html";
     } else {
         alert("Nimi tai salasana on väärin!");
     }
@@ -51,7 +51,7 @@ async function rekisteröidy() {
                 await häsh(document.getElementById("salasana").value)
             );
             localStorage.setItem("kirjautunut", true);
-            window.location.href = "pizzasivu.html";
+            window.location.href = "kotisivu.html";
         } else {
             alert("Anna nimi ja salasana");
         }
