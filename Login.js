@@ -23,21 +23,24 @@ async function kirjaudu() {
         return;
     }
 
-    if (document.getElementById("nimi").value == localStorage.getItem("nimi") &&
-        await häsh(document.getElementById("salasana").value) == localStorage.getItem("salasana")) {
-        window.location.href = "kotisivu.html";
     if (
         document.getElementById("nimi").value == localStorage.getItem("nimi") &&
         (await häsh(document.getElementById("salasana").value)) ==
             localStorage.getItem("salasana")
     ) {
-        window.location.href = "pizzasivu.html";
-    } else {
-        alert("Nimi tai salasana on väärin!");
+        window.location.href = "kotisivu.html";
+        if (
+            document.getElementById("nimi").value ==
+                localStorage.getItem("nimi") &&
+            (await häsh(document.getElementById("salasana").value)) ==
+                localStorage.getItem("salasana")
+        ) {
+            window.location.href = "pizzasivu.html";
+        } else {
+            alert("Nimi tai salasana on väärin!");
+        }
     }
 }
-
-function kirjauduUlos() {}
 
 async function rekisteröidy() {
     document.getElementById("kirjautuminen").innerText = "Rekisteröidy";
@@ -60,4 +63,4 @@ async function rekisteröidy() {
         }
     }
     reg = 1;
-}}
+}
