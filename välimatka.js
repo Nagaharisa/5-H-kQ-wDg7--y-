@@ -26,6 +26,7 @@ async function välimatka(osoite) {
         document.getElementById("välimatka_").style.display = "none";
         document.getElementById("välimatkaKusi").style.display = "block";
         return;
+        
     }
 
     document.getElementById("välimatka").innerText = valimatka.toFixed(2);
