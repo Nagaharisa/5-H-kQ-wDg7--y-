@@ -23,6 +23,9 @@ async function kirjaudu() {
         return;
     }
 
+    if (document.getElementById("nimi").value == localStorage.getItem("nimi") &&
+        await häsh(document.getElementById("salasana").value) == localStorage.getItem("salasana")) {
+        window.location.href = "kotisivu.html";
     if (
         document.getElementById("nimi").value == localStorage.getItem("nimi") &&
         (await häsh(document.getElementById("salasana").value)) ==
@@ -51,10 +54,10 @@ async function rekisteröidy() {
                 await häsh(document.getElementById("salasana").value)
             );
             localStorage.setItem("kirjautunut", true);
-            window.location.href = "pizzasivu.html";
+            window.location.href = "kotisivu.html";
         } else {
             alert("Anna nimi ja salasana");
         }
     }
     reg = 1;
-}
+}}
