@@ -12,7 +12,7 @@ async function onkoKirjautunut() {
     let kirjautunut = localStorage.getItem("kirjautunut");
 
     if (kirjautunut) {
-        document.getElementById("nimi").value = localStorage.getItem("nimi");
+        document.getElementById("roope").innerText = localStorage.getItem("nimi");
     }
 }
 

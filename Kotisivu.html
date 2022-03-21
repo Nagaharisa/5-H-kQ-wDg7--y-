@@ -15,7 +15,8 @@
 
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
-      <a class="navbar-brand" href="Kotisivu.html"><img src='./Kuvat/Logo.png' width="70" height="70" class='writer-img'></a>
+      <a class="navbar-brand" href="Kotisivu.html"><img src='./Kuvat/Logo.png' width="70" height="70"
+          class='writer-img'></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -33,8 +34,7 @@
             <a class="nav-link" href="yhtyestiedot.html">Yhteystiedot</a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link" href="pizzasivu.html" id="navbarDropdown" role="button"
-              aria-expanded="false">
+            <a class="nav-link" href="pizzasivu.html" id="navbarDropdown" role="button" aria-expanded="false">
               Pizzat
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -50,18 +50,16 @@
             <a class="nav-link disabled"></a>
           </li>
         </ul>
-        <input type=button class="btn btn-success"onClick="location.href='kirjautuminen.html'"
-        value='Kirjaudu'>
-        <input type=button style="margin: 0;"class="btn btn-success"onClick="location.href='kirjautuminen.html'"
-        value='Kirjaudu'                                                                                                                  >
-     </div>
+        <span id="roope" class="nav-link"></span>
+        <input type="button" style="margin: 0;"  class="btn btn-success" onClick="location.href='kirjautuminen.html'" value='Kirjaudu'>
+      </div>
     </div>
   </nav>
 
   <h1>Poutava Pizza</h1>
   <div class="container">
     <div class="SivuKuvat-div">
-      <img class="sivu-kuva" src="Kuvat/kot.jpg" height="200" width="300"> 
+      <img class="sivu-kuva" src="Kuvat/kot.jpg" height="200" width="300">
       <img class="sivu-kuva" src="Kuvat/kat.jpg" height="200" width="300">
       <img class="sivu-kuva" src="Kuvat/pee.jpg" height="200" width="300">
     </div>
@@ -69,26 +67,25 @@
 
   <div class="container">
     <div class="sivu-teksti">
-      <p>Tervetuloa Poutava Pizzaan, pizzeriamme valmistaa ja toimittaa suomessa valmistettuja pizzoja. Poutava pizza on perustettu Italiassa ja laajentanut myöhemmin ympäri maailmaa. ©</p>
+      <p>Tervetuloa Poutava Pizzaan, pizzeriamme valmistaa ja toimittaa suomessa valmistettuja pizzoja. Poutava pizza on
+        perustettu Italiassa ja laajentanut myöhemmin ympäri maailmaa. ©</p>
     </div>
   </div>
 
   <h1>Aukioloajat</h1>
   <p>Maanantai-Perjantai 10.00-18.00</p>
-  <p>Lauantai    12.00-20.00</p>
-  <p>Sunnuntai    Suljettu.</p>
-
-   
-
-  
-
-
-    <!-- Tässä on Kotisivun kirjautumis nappulan koodi tuohon kirjaudu/ rekisteröidy sivulle. -->
-   <script type="text/javascript">
-      document.getElementById("KirjauduSivuButton").onclick = function () {
-        window.location.href = "kirjautuminen.html";
-      };
-   </script>
+  <p>Lauantai 12.00-20.00</p>
+  <p>Sunnuntai Suljettu.</p>
 
 
 
+
+
+
+  <!-- Tässä on Kotisivun kirjautumis nappulan koodi tuohon kirjaudu/ rekisteröidy sivulle. -->
+  <script type="text/javascript">
+    document.getElementById("KirjauduSivuButton").onclick = function () {
+      window.location.href = "kirjautuminen.html";
+    };
+  </script>
+  <script src="Login.js" defer></script>
