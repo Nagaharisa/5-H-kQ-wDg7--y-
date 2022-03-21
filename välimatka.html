@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="välimatka.js"></script>
+</head>
+
+<body>
+    <input type="text" name="osoite" id="osoite"> <button onclick="välimatka(document.getElementById('osoite').value)" type="submit">Tarkista osoite</button>
+    <p id="välimatka_" style="display: none;">Välimatka on <span id="välimatka"></span>km</p>
+    <p id="välimatkaKusi" style="display: none;">Osoitetta ei löytynyt</p>
+
+</body>
+
+</html>

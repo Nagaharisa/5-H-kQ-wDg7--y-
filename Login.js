@@ -3,18 +3,15 @@ let reg = 0;
 document.addEventListener("DOMContentLoaded", onkoKirjautunut);
 
 async function häsh(häshättävä) {
-    const res = await fetch(`https://api.hashify.net/hash/md5/hex?value=${häshättävä}`)
-    const data = await res.json()
-    return data.Digest
+    const res = await fetch(
+        `https://api.hashify.net/hash/md5/hex?value=${häshättävä}`
+    );
+    const data = await res.json();
+    return data.Digest;
 }
 
 async function onkoKirjautunut() {
-    
     let kirjautunut = localStorage.getItem("kirjautunut");
-
-    if (kirjautunut) {
-        document.getElementById("nimi").value = localStorage.getItem("nimi");
-    }
 }
 
 async function kirjaudu() {
@@ -28,6 +25,12 @@ async function kirjaudu() {
 
     if (document.getElementById("nimi").value == localStorage.getItem("nimi") &&
         await häsh(document.getElementById("salasana").value) == localStorage.getItem("salasana")) {
+        window.location.href = "kotisivu.html";
+    if (
+        document.getElementById("nimi").value == localStorage.getItem("nimi") &&
+        (await häsh(document.getElementById("salasana").value)) ==
+            localStorage.getItem("salasana")
+    ) {
         window.location.href = "pizzasivu.html";
     } else {
         alert("Nimi tai salasana on väärin!");
@@ -51,10 +54,10 @@ async function rekisteröidy() {
                 await häsh(document.getElementById("salasana").value)
             );
             localStorage.setItem("kirjautunut", true);
-            window.location.href = "pizzasivu.html";
+            window.location.href = "kotisivu.html";
         } else {
             alert("Anna nimi ja salasana");
         }
     }
     reg = 1;
-}
+}}
