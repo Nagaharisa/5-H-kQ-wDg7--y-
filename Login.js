@@ -1,17 +1,5 @@
 let reg = 0;
 
-async function a() {
-
-
-    res = await fetch(
-        `https://api.allorigins.win/get?url=${encodeURIComponent(
-            `https://www.fonecta.fi/kartat?z=14&from=kerava&to=helsinki&rt=fastest`
-        )}`
-    );
-    data = await res.json();
-    console.log(data.contents);
-}
-
 document.addEventListener("DOMContentLoaded", onkoKirjautunut);
 
 async function häsh(häshättävä) {
