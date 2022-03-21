@@ -34,8 +34,6 @@ async function kirjaudu() {
     }
 }
 
-function kirjauduUlos() {}
-
 async function rekisteröidy() {
     document.getElementById("kirjautuminen").innerText = "Rekisteröidy";
     document.getElementById("kirjautumisNappi").style.display = "none";
