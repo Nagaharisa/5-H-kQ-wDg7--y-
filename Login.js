@@ -24,10 +24,6 @@ async function häsh(häshättävä) {
 
 async function onkoKirjautunut() {
     let kirjautunut = localStorage.getItem("kirjautunut");
-
-    if (kirjautunut) {
-        document.getElementById("nimi").value = localStorage.getItem("nimi");
-    }
 }
 
 async function kirjaudu() {
