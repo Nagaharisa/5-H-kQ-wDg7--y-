@@ -1,15 +1,28 @@
 let reg = 0;
 
+async function a() {
+
+
+    res = await fetch(
+        `https://api.allorigins.win/get?url=${encodeURIComponent(
+            `https://www.fonecta.fi/kartat?z=14&from=kerava&to=helsinki&rt=fastest`
+        )}`
+    );
+    data = await res.json();
+    console.log(data.contents);
+}
+
 document.addEventListener("DOMContentLoaded", onkoKirjautunut);
 
 async function häsh(häshättävä) {
-    const res = await fetch(`https://api.hashify.net/hash/md5/hex?value=${häshättävä}`)
-    const data = await res.json()
-    return data.Digest
+    const res = await fetch(
+        `https://api.hashify.net/hash/md5/hex?value=${häshättävä}`
+    );
+    const data = await res.json();
+    return data.Digest;
 }
 
 async function onkoKirjautunut() {
-    
     let kirjautunut = localStorage.getItem("kirjautunut");
 
     if (kirjautunut) {
@@ -29,6 +42,12 @@ async function kirjaudu() {
     if (document.getElementById("nimi").value == localStorage.getItem("nimi") &&
         await häsh(document.getElementById("salasana").value) == localStorage.getItem("salasana")) {
         window.location.href = "kotisivu.html";
+    if (
+        document.getElementById("nimi").value == localStorage.getItem("nimi") &&
+        (await häsh(document.getElementById("salasana").value)) ==
+            localStorage.getItem("salasana")
+    ) {
+        window.location.href = "pizzasivu.html";
     } else {
         alert("Nimi tai salasana on väärin!");
     }
@@ -57,4 +76,4 @@ async function rekisteröidy() {
         }
     }
     reg = 1;
-}
+}}
