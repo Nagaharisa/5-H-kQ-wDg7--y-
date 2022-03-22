@@ -10,6 +10,7 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link href='body.css' rel='stylesheet'>
     <script src="pitsanosto.js"></script>
+    <script src="Login.js"></script>
   </head>
 
 <body>
@@ -54,8 +55,9 @@
           </li>
         </ul>
         <form class="d-flex">
-          <input type=button style="margin: 0;" class="btn btn-success"onClick="location.href='kirjautuminen.html'"
-          value='Kirjaudu'>
+          <span style="color: white;" id="roope" class="nav-link">Hei</span>
+        <input id="kirjaudu" type="button" style="margin: 0; display: none;"  class="btn btn-success" onClick="location.href='kirjautuminen.html'" value='Kirjaudu'>
+        <input id="kirjauduUlos" type="button" style="margin: 0; display: none;"  class="btn btn-success" onClick="localStorage.setItem('kirjautunut', false); location.reload()" value='Kirjaudu ulos'>
         </form>
       </div>
     </div>

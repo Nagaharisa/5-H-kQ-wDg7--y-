@@ -10,13 +10,15 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link href='body.css' rel='stylesheet'>
     <script src="pitsanosto.js"></script>
+    <script src="Login.js"></script>
   </head>
 
 <body>
 
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
-      <a class="navbar-brand" href="Kotisivu.html"><img src='./Kuvat/Logo.png' width="70" height="70" class='writer-img'></a>
+      <a class="navbar-brand" href="Kotisivu.html"><img src='./Kuvat/Logo.png' width="70" height="70"
+          class='writer-img'></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -36,8 +38,7 @@
             <a class="nav-link" href="yhtyestiedot.html">Yhteystiedot</a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link" href="pizzasivu.html" id="navbarDropdown" role="button"
-              aria-expanded="false">
+            <a class="nav-link" href="pizzasivu.html" id="navbarDropdown" role="button" aria-expanded="false">
               Pizzat
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -54,8 +55,11 @@
           </li>
         </ul>
         <form class="d-flex">
-          <input type=button style="margin: 0;" class="btn btn-success"onClick="location.href='kirjautuminen.html'"
-          value='Kirjaudu'>
+          <span style="color: white;" id="roope" class="nav-link">Hei</span>
+          <input id="kirjaudu" type="button" style="margin: 0; display: none;" class="btn btn-success"
+            onClick="location.href='kirjautuminen.html'" value='Kirjaudu'>
+          <input id="kirjauduUlos" type="button" style="margin: 0; display: none;" class="btn btn-success"
+            onClick="localStorage.setItem('kirjautunut', false); location.reload()" value='Kirjaudu ulos'>
         </form>
       </div>
     </div>
@@ -71,8 +75,7 @@
         <p class="card-text">Tavallinen tai Zero 0,5L</p>
       </div>
       <ul class="list-group list-group-flush">
-        <input type=button class="btn btn-success"onClick="location.href='cokis.html'"
-        value='Tilaa!'>
+        <input type=button class="btn btn-success" onClick="location.href='cokis.html'" value='Tilaa!'>
     </div>
     <div class="card">
       <img src="./Kuvat/fanta.jpg" class="card-img-top" alt="...">
@@ -81,8 +84,7 @@
         <p class="card-text">Tavallinen 0,5L</p>
       </div>
       <ul class="list-group list-group-flush">
-        <input type=button class="btn btn-success"onClick="location.href='fanta.html'"
-        value='Tilaa!'>
+        <input type=button class="btn btn-success" onClick="location.href='fanta.html'" value='Tilaa!'>
       </ul>
     </div>
     <div class="card">
@@ -92,8 +94,7 @@
         <p class="card-text">400ml Tuoppi 5,5% K18!</p>
       </div>
       <ul class="list-group list-group-flush">
-        <input type=button class="btn btn-success"onClick="location.href='Karhu.html'"
-        value='Tilaa!'>
+        <input type=button class="btn btn-success" onClick="location.href='Karhu.html'" value='Tilaa!'>
       </ul>
     </div>
     <div class="card">
@@ -103,8 +104,7 @@
         <p class="card-text">Muumilimu 0,5L</p>
       </div>
       <ul class="list-group list-group-flush">
-        <input type=button class="btn btn-success"onClick="location.href='Muumilimu.html'"
-        value='Tilaa!'>
+        <input type=button class="btn btn-success" onClick="location.href='Muumilimu.html'" value='Tilaa!'>
       </ul>
     </div>
 
@@ -115,8 +115,7 @@
         <p class="card-text">Tavallinen 0,5L</p>
       </div>
       <ul class="list-group list-group-flush">
-        <input type=button class="btn btn-success"onClick="location.href='sprite.html'"
-        value='Tilaa!'>
+        <input type=button class="btn btn-success" onClick="location.href='sprite.html'" value='Tilaa!'>
       </ul>
     </div>
 </body>

@@ -50,8 +50,10 @@
             <a class="nav-link disabled"></a>
           </li>
         </ul>
-        <span id="roope" class="nav-link"></span>
-        <input type="button" style="margin: 0;"  class="btn btn-success" onClick="location.href='kirjautuminen.html'" value='Kirjaudu'>
+        
+        <span style="color: white;" id="roope" class="nav-link">Hei</span>
+        <input id="kirjaudu" type="button" style="margin: 0; display: none;"  class="btn btn-success" onClick="location.href='kirjautuminen.html'" value='Kirjaudu'>
+        <input id="kirjauduUlos" type="button" style="margin: 0; display: none;"  class="btn btn-success" onClick="localStorage.setItem('kirjautunut', false); location.reload()" value='Kirjaudu ulos'>
       </div>
     </div>
   </nav>
@@ -83,9 +85,11 @@
 
 
   <!-- Tässä on Kotisivun kirjautumis nappulan koodi tuohon kirjaudu/ rekisteröidy sivulle. -->
+  <!--
   <script type="text/javascript">
     document.getElementById("KirjauduSivuButton").onclick = function () {
       window.location.href = "kirjautuminen.html";
     };
-  </script>
+    </script>
+    -->
   <script src="Login.js" defer></script>
