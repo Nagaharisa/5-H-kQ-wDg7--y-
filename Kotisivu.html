@@ -50,10 +50,12 @@
             <a class="nav-link disabled"></a>
           </li>
         </ul>
-        
+
         <span style="color: white;" id="roope" class="nav-link">Hei</span>
-        <input id="kirjaudu" type="button" style="margin: 0; display: none;"  class="btn btn-success" onClick="location.href='kirjautuminen.html'" value='Kirjaudu'>
-        <input id="kirjauduUlos" type="button" style="margin: 0; display: none;"  class="btn btn-success" onClick="localStorage.setItem('kirjautunut', false); location.reload()" value='Kirjaudu ulos'>
+        <input id="kirjaudu" type="button" style="margin: 0; display: none;" class="btn btn-success"
+          onClick="location.href='kirjautuminen.html'" value='Kirjaudu'>
+        <input id="kirjauduUlos" type="button" style="margin: 0; display: none;" class="btn btn-success"
+          onClick="localStorage.setItem('kirjautunut', false); location.reload()" value='Kirjaudu ulos'>
       </div>
     </div>
   </nav>
@@ -93,3 +95,39 @@
     </script>
     -->
   <script src="Login.js" defer></script>
+
+  <script>
+    function convertToJSON() {
+      var firstname = "Roope"
+      var lastname = "Hopolainen"
+      var email = "roope.holopainen@edu.keuda.fi"
+
+      var jsonObject = {
+        "FirstName": firstname,
+        "LastName": lastname,
+        "email": email
+      }
+      
+    }
+
+    function saveToFile() {
+      convertToJSON();
+
+      var blob = new Blob([jsonObjectAsString], {
+        //type: 'application/json'
+        type: 'octet/stream'
+      });
+      console.log(blob);
+
+      var anchor = document.createElement('a')
+      anchor.download = "dataa.json";
+      anchor.href = window.URL.createObjectURL(blob);
+      anchor.innerHTML = "download"
+      anchor.click();
+
+      console.log(anchor);
+
+      document.getElementById('output').append(anchor)
+
+
+    }</script>
