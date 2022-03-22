@@ -28,11 +28,18 @@
             <input type="checkbox" name="choice" value="1€" onchange="checkTotal()"/>Extra Oliiveja 1€<br/>
             <input type="checkbox" name="choice" value="1€" onchange="checkTotal()"/>Extra pepperonia 1€<br/>
             <input type="checkbox" name="choice" value="1€" onchange="checkTotal()"/>Extra Homejuustoa 1€<br/>
-            <input type="radio" name="choice" value="1€" onchange="checkTotal()"/>Pieni 1€<br/>
-            <input type="radio" name="choice" value="2€" onchange="checkTotal()"/>Medium 2€<br/>
-            <input type="radio" name="choice" value="3€" onchange="checkTotal()"/>Suuri 3€<br/>
+            <input type="radio" id="selectedPizzaAmount" name="choice" value="1€" onchange="checkTotal()"/>Pieni 1€<br/>
+            <input type="radio" id="selectedPizzaAmount" name="choice" value="2€" onchange="checkTotal()"/>Medium 2€<br/>
+            <input type="radio" id="selectedPizzaAmount" name="choice" value="3€" onchange="checkTotal()"/>Suuri 3€<br/>
             
+            <select name="pizzaCount" id="pizzaCount">
+              <option value="1">1 </option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+            </select>
           </div>
+
         <div class="mt-3 text-center ">
             <h6>Pizzan summa täytteillä</h5>
             Summa: <input type="text" size="2" disabled="true" name="total" value="€">€</input>
@@ -43,15 +50,19 @@
       <script type="text/javascript">
         function checkTotal() {
           document.listForm.total.value = '';
-          var sum = 12;
+          var getPizzaAmount = document.getElementById("pizzaCount")
+          var selectedPizzaAmount = getPizzaAmount.options[getPizzaAmount.selectedIndex].text;
+
+         var sum = 12;
           for (i=0;i<document.listForm.choice.length;i++) {
             if (document.listForm.choice[i].checked) {
-              sum = sum + parseInt(document.listForm.choice[i].value);
+              sum = sum + parseInt(document.listForm.choice[i].value) * selectedPizzaAmount;
             }
           }
-          document.listForm.total.value = sum;
+          document.listForm.total.value = sum ;
           
         }
+        
       </script>
 <div class="mt-4 text-center">
 <input type=button class="btn btn-success"onClick="location.href='välimatka.html'"
