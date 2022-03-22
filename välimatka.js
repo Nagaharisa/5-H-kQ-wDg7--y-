@@ -10,7 +10,7 @@ async function välimatka(osoite) {
     let data = await res.json();
 
     for (let i = 0; i < data.data.length; i++) {
-        if (data.data[i].administrative_area == "Kerava") {
+        if (true) {
             valimatka = await distance(
                 60.40515530242967,
                 25.09979260638944,
