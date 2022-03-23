@@ -162,7 +162,6 @@
     xhr.open("POST", url);
 
     xhr.setRequestHeader("Content-Type", "application/json");
-    xhr.setRequestHeader("Access-Control-Allow-Origin", "https://nagaharisa.github.io/pitsa/yhtyestiedot.html");
 
     xhr.onreadystatechange = function () {
         if (xhr.readyState === 4) {
@@ -194,8 +193,6 @@
 
     alert("Palautteesi on lähetetty!"); 
     xhr.send(data);
-
-    xhr.timeout = 3600000;
 
     puhelinnumero = document.getElementById("puhelinnumero").value = "";
     sähköposti = document.getElementById("sähköposti").value = "";
