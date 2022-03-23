@@ -1,6 +1,6 @@
 body {
     /* Old browsers */
-    background: whitesmoke;
+    background: rgb(62, 108, 161);
     /* Chrome 10-25, Safari 5.1-6 */
     background: -webkit-linear-gradient(-45deg, #cd5c5c);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
@@ -16,7 +16,7 @@ body {
 }
 
 h1 {
-    color: rgb(0, 0, 0) !important;
+    color: rgb(255, 255, 255) !important;
     font-size: 2em;
     padding-top: 40px;
     padding-bottom: 20px;
@@ -42,7 +42,7 @@ h2 {
 }
 
 p {
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     line-height: 1.3em;
     text-align: center;
     width: 100%;
@@ -96,6 +96,7 @@ p {
 .card-text {
     color: rgb(0, 0, 0);
     font-size: 17px;
+    font-style: oblique;
 }
 .card-title {
     font-size: 21px;
@@ -106,6 +107,7 @@ p {
     width: 18rem;
     padding: 15px;
     height: minmax(390, auto);
+    background-color: rgb(190, 178, 178);
 }
 
 .kirjautuminen {
@@ -227,4 +229,10 @@ h5 {
 /*---- osto? -----*/
 .tieto {
     margin-top: 40px;
+}
+.sivu-teksti{
+    font-style: oblique;
+}
+.aukiolot{
+    font-style: oblique;
 }
