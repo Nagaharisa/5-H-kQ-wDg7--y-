@@ -150,6 +150,10 @@
     let name = document.getElementById("name").value;
     let aihe = document.getElementById("aihe").value;
 
+    if (name == "" || sähköposti == "" || puhelinnumero == "" || aihe == "" || viesti == "") {
+      alert("Täytä kaikki kentät!");
+      return
+    }
 
     var url =
         "https://discord.com/api/webhooks/956274270680535141/44KEJnhR6NUYiRkb4wlUZ0GSum4uuyokq27KP2tuIutsayX1z3MHw-cXY5VU3uHHJsWW";
@@ -157,10 +161,9 @@
     var xhr = new XMLHttpRequest();
     xhr.open("POST", url);
 
-    xhr.setRequestHeader("Origin", "https://nagaharisa.github.io/pitsa/yhtyestiedot.html");
     xhr.setRequestHeader("Content-Type", "application/json");
+    xhr.setRequestHeader("Access-Control-Allow-Origin", "https://nagaharisa.github.io/pitsa/yhtyestiedot.html");
 
-    xhr.timeout = 3600000;
     xhr.onreadystatechange = function () {
         if (xhr.readyState === 4) {
             console.log(xhr.status);
@@ -189,19 +192,16 @@
 }`;
 
 
-
+    alert("Palautteesi on lähetetty!"); 
     xhr.send(data);
 
-    if (name == "" || sähköposti == "" || puhelinnumero == "" || aihe == "" || viesti == "") {
-      alert("Täytä kaikki kentät!");
-    } else {
-      alert("Palautteesi on lähetetty!");
-      puhelinnumero = document.getElementById("puhelinnumero").value = "";
-      sähköposti = document.getElementById("sähköposti").value = "";
-      viesti = document.getElementById("viesti").value = "";
-      name = document.getElementById("name").value = "";
-      aihe = document.getElementById("aihe").value = "";
-    }
+    xhr.timeout = 3600000;
+
+    puhelinnumero = document.getElementById("puhelinnumero").value = "";
+    sähköposti = document.getElementById("sähköposti").value = "";
+    viesti = document.getElementById("viesti").value = "";
+    name = document.getElementById("name").value = "";
+    aihe = document.getElementById("aihe").value = "";
 }
 
   </script>
