@@ -64,7 +64,7 @@
 
       <!--Grid column-->
       <div class="col-md-9 mb-md-0 mb-5">
-        <form id="contact-form" name="contact-form" action="form.php" method="post">
+        <form id="contact-form" name="contact-form">
           <div class="row">
             <div class="col-md-6">
               <div class="md-form mb-0">
@@ -75,24 +75,23 @@
             <div class="col-md-6">
               <div class="md-form mb-7">
                 <label for="email" class="">Email</label>
-                <input type="email" id="email" name="email" class="form-control" required width="100%">
+                <input type="email" id="sähköposti" name="sähköposti" class="form-control" required width="100%">
               </div>
             </div>
-
           </div>
           <div class="row">
             <div class="col-md-12">
               <div class="md-form mb-0">
                 <label for="subject" class="">Puhelinnumero</label>
-                <input type="tel" id="phone" name="phone" class="form-control" required>
+                <input type="tel" id="puhelinnumero" name="puhelinnumero" class="form-control" required>
               </div>
             </div>
           </div>
           <div class="row">
             <div class="col-md-12">
               <div class="md-form mb-0">
-                <label for="subject" class="">Aihe</label>
-                <input type="text" id="subject" name="subject" class="form-control" required>
+                <label for="subject">Aihe</label>
+                <input type="text" id="aihe" name="aihe" class="form-control" required>
               </div>
             </div>
           </div>
@@ -102,8 +101,8 @@
             <div class="col-md-12">
 
               <div class="md-form">
-                <label for="subject" class="">Viesti</label>
-                <textarea type="text" id="message" name="message" rows="2" class="form-control" required></textarea>
+                <label for="subject">Viesti</label>
+                <textarea type="text" id="viesti" name="viesti" rows="4" class="form-control" required></textarea>
               </div>
 
             </div>
@@ -111,7 +110,7 @@
 
 
           <div class="text-center text-md-left">
-            <input type="submit" value="Lähetä" style="margin: 20px auto;">
+            <input type="button" value="Lähetä" style="margin: 20px auto;" onclick="lähetä()"/>
         </form>
       </div>
 
@@ -142,3 +141,65 @@
     };
   </script>
   <script src="Login.js" defer></script>
+
+  <script>
+    async function lähetä() {
+    let puhelinnumero = document.getElementById("puhelinnumero").value;
+    let sähköposti = document.getElementById("sähköposti").value;
+    let viesti = document.getElementById("viesti").value;
+    let name = document.getElementById("name").value;
+    let aihe = document.getElementById("aihe").value;
+
+
+    var url =
+        "https://discord.com/api/webhooks/951108191335379004/EtjSEL82p93Z4lceAx5ghp4I9O6kHeX-xDZfp-9Htllxn-LEZRLabLEKGsY4jXo_SFUg";
+
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", url);
+
+    xhr.setRequestHeader("Content-Type", "application/json");   
+
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4) {
+            console.log(xhr.status);
+            console.log(xhr.responseText);
+        }
+    };
+
+    var data = `{
+    "username": "Palaute botti",
+    "embeds": [
+        {
+            "title": "Palaute",
+            "fields": [
+                {
+                    "name": "Nimiㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ",
+                    "value": "${name}"
+                },
+                { "name": "Sähköposti", "value": "${sähköposti}" },
+                { "name": "Puhelinnumero", "value": "${puhelinnumero}" },
+                { "name": "Aihe", "value": "${aihe}" },
+                { "name": "Viesti", "value": "${viesti}" }
+            ]
+        }
+    ]
+}`;
+
+
+
+    xhr.send(data);
+
+    if (name == "" || sähköposti == "" || puhelinnumero == "" || aihe == "" || viesti == "") {
+      alert("Täytä kaikki kentät!");
+    } else {
+      alert("Palautteesi on lähetetty!");
+      puhelinnumero = document.getElementById("puhelinnumero").value = "";
+      sähköposti = document.getElementById("sähköposti").value = "";
+      viesti = document.getElementById("viesti").value = "";
+      name = document.getElementById("name").value = "";
+      aihe = document.getElementById("aihe").value = "";
+    }
+    
+}
+
+  </script>
