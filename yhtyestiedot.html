@@ -69,13 +69,13 @@
             <div class="col-md-6">
               <div class="md-form mb-0">
                 <label for="name" class="">Nimi</label>
-                <input type="text" id="name" name="name" class="form-control" required>
+                <input type="text" id="name" name="name" class="form-control" required maxlength="40">
               </div>
             </div>
             <div class="col-md-6">
               <div class="md-form mb-7">
                 <label for="email" class="">Email</label>
-                <input type="email" id="sähköposti" name="sähköposti" class="form-control" required width="100%">
+                <input type="email" id="sähköposti" name="sähköposti" class="form-control" required width="100%" maxlength="40">
               </div>
             </div>
           </div>
@@ -83,7 +83,7 @@
             <div class="col-md-12">
               <div class="md-form mb-0">
                 <label for="subject" class="">Puhelinnumero</label>
-                <input type="tel" id="puhelinnumero" name="puhelinnumero" class="form-control" required>
+                <input type="tel" id="puhelinnumero" name="puhelinnumero" class="form-control" maxlength="18" required>
               </div>
             </div>
           </div>
@@ -91,7 +91,7 @@
             <div class="col-md-12">
               <div class="md-form mb-0">
                 <label for="subject">Aihe</label>
-                <input type="text" id="aihe" name="aihe" class="form-control" required>
+                <input type="text" id="aihe" name="aihe" class="form-control" required maxlength="50"> 
               </div>
             </div>
           </div>
@@ -102,7 +102,7 @@
 
               <div class="md-form">
                 <label for="subject">Viesti</label>
-                <textarea type="text" id="viesti" name="viesti" rows="4" class="form-control" required></textarea>
+                <textarea type="text" id="viesti" name="viesti" rows="4" class="form-control" required maxlength="500"></textarea>
               </div>
 
             </div>
