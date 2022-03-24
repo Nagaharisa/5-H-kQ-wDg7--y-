@@ -1,6 +1,6 @@
 body {
     /* Old browsers */
-    background: rgb(105, 179, 37);
+    background: rgb(177, 96, 20);
     /* Chrome 10-25, Safari 5.1-6 */
     background: -webkit-linear-gradient(-45deg, #cd5c5c);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
@@ -107,7 +107,7 @@ p {
     width: 18rem;
     padding: 15px;
     height: minmax(390, auto);
-    background-color: rgb(190, 178, 178);
+    background-color: rgb(242, 247, 0);
 }
 
 .kirjautuminen {
