@@ -45,7 +45,7 @@ async function kirjaudu() {
         (await häsh(document.getElementById("salasana").value)) ==
             localStorage.getItem("salasana")
     ) {
-        window.location.href = "kotisivu.html";
+        window.location.href = "Kotisivu.html";
         localStorage.setItem("kirjautunut", "true");
     } else {
         alert("Nimi tai salasana on väärin!");
@@ -67,7 +67,7 @@ async function rekisteröidy() {
                 await häsh(document.getElementById("salasana").value)
             );
             localStorage.setItem("kirjautunut", true);
-            window.location.href = "kotisivu.html";
+            window.location.href = "Kotisivu.html";
         } else {
             alert("Anna nimi ja salasana");
         }
