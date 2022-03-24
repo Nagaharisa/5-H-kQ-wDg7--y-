@@ -4,7 +4,7 @@ async function välimatka(osoite) {
     let toimAika = 0;
 
     let res = await fetch(
-        `http://api.positionstack.com/v1/forward?access_key=9d0974d5f694e55ec3d9320c7090a60d&country=FI&limit=50&query=${encodeURIComponent(
+        `http://api.positionstack.com/v1/forward?access_key=edc3e4fe341f0eec0d131b3d4f06a2f4&country=FI&limit=50&query=${encodeURIComponent(
             osoite
         )}`
     );
