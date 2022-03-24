@@ -1,66 +1,53 @@
-<div class="checkout-panel">
-  <div class="panel-body">
-    <h2 class="title">Checkout</h2>
-    <link href="Ostoskori.css" src="stylesheet">
- 
-    <div class="progress-bar">
-      <div class="step active"></div>
-      <div class="step active"></div>
-      <div class="step"></div>
-      <div class="step"></div>
-    </div>
- 
-    <div class="payment-method">
-      <label for="card" class="method card">
-        <div class="card-logos">
-          <img src="img/visa_logo.png"/>
-          <img src="img/mastercard_logo.png"/>
-        </div>
- 
-        <div class="radio-input">
-          <input id="card" type="radio" name="payment">
-          Pay £340.00 with credit card
-        </div>
-      </label>
- 
-      <label for="paypal" class="method paypal">
-        <img src="img/paypal_logo.png"/>
-        <div class="radio-input">
-          <input id="paypal" type="radio" name="payment">
-          Pay £340.00 with PayPal
-        </div>
-      </label>
-    </div>
- 
-    <div class="input-fields">
-      <div class="column-1">
-        <label for="cardholder">Cardholder's Name</label>
-        <input type="text" id="cardholder" />
- 
-        <div class="small-inputs">
-          <div>
-            <label for="date">Valid thru</label>
-            <input type="text" id="date" placeholder="MM / YY" />
-          </div>
- 
-          <div>
-            <label for="verification">CVV / CVC *</label>
-            <input type="password" id="verification"/>
-          </div>
-        </div>
- 
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Star Rating Form | CodingNepal</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  </head>
+  <body>
+    <div class="container">
+      <div class="post">
+        <div class="text">Thanks for rating us!</div>
+        <div class="edit">EDIT</div>
       </div>
-      <div class="column-2">
-        <label for="cardnumber">Card Number</label>
-        <input type="password" id="cardnumber"/>
- 
-        <span class="info">* CVV or CVC is the card security code, unique three digits number on the back of your card separate from its number.</span>
+      <div class="star-widget">
+        <input type="radio" name="rate" id="rate-5">
+        <label for="rate-5" class="fas fa-star"></label>
+        <input type="radio" name="rate" id="rate-4">
+        <label for="rate-4" class="fas fa-star"></label>
+        <input type="radio" name="rate" id="rate-3">
+        <label for="rate-3" class="fas fa-star"></label>
+        <input type="radio" name="rate" id="rate-2">
+        <label for="rate-2" class="fas fa-star"></label>
+        <input type="radio" name="rate" id="rate-1">
+        <label for="rate-1" class="fas fa-star"></label>
+        <form action="#">
+          <header></header>
+          <div class="textarea">
+            <textarea cols="30" placeholder="Describe your experience.."></textarea>
+          </div>
+          <div class="btn">
+            <button type="submit">Post</button>
+          </div>
+        </form>
       </div>
     </div>
-  </div>
- 
-  <div class="panel-footer">
-    <button class="btn back-btn">Back</button>
-    <button class="btn next-btn">Next Step</button>
-  </div>
-</div>
+    <script>
+      const btn = document.querySelector("button");
+      const post = document.querySelector(".post");
+      const widget = document.querySelector(".star-widget");
+      const editBtn = document.querySelector(".edit");
+      btn.onclick = ()=>{
+        widget.style.display = "none";
+        post.style.display = "block";
+        editBtn.onclick = ()=>{
+          widget.style.display = "block";
+          post.style.display = "none";
+        }
+        return false;
+      }
+    </script>
+  </body>
+</html>
