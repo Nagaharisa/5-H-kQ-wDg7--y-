@@ -3,194 +3,197 @@
 
 <head>
 
-  <head>
-    <title>PoutavaSpesiaali</title>
-    <link rel="shortcut icon" href="kuvat/Logo.png">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link href='body.css' rel='stylesheet'>
-    <script src="pitsanosto.js"></script>
-  </head>
+    <head>
+        <title>Sienipizza</title>
+        <link rel="shortcut icon" href="kuvat/Sienipizza.jpg">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <link href='body.css' rel='stylesheet'>
+    </head>
 
-</head>
+    <style>
+        .a {
+            margin-top: 40px;
+        }
 
-<style>
-  .a {
-      margin-top: 40px;
-  }
+        .kattoo {
+            display: grid;
+            place-content: center;
+            place-items: top;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 170px;
+            grid-template-areas: "one two""three two""four five""six seven";
+        }
 
-  .kattoo {
-      display: grid;
-      place-content: center;
-      place-items: top;
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: 170px;
-      grid-template-areas: "one two""three two""four five";
-  }
+        .one {
+            grid-area: one;
+        }
 
-  .one {
-      grid-area: one;
-  }
+        .two {
+            grid-area: two;
+        }
 
-  .two {
-      grid-area: two;
-  }
+        .three {
+            grid-area: three;
+        }
 
-  .three {
-      grid-area: three;
-  }
+        .four {
+            grid-area: four;
+        }
 
-  .four {
-      grid-area: four;
-  }
+        .five {
+            grid-area: five;
+        }
 
-  .five {
-      grid-area: five;
-      
-  }
+        .six {
+            grid-area: six;
+        }
 
-  /* .six {
-      grid-area: six;
-  }
+        .seven {
+            grid-area: seven;
+        }
+    </style>
+    <h1>Sienipizza</h1>
+    <div class="card-container">
+        <div class="card" style="width: 600px;">
+            <img src="./Kuvat/Sienipizza.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Sienipizza</h5>
 
-  .seven {
-      grid-area: seven;
-  } */
-</style>
-<h1>Sienipizza</h1>
-<div class="card-container">
-  <div class="card" style="width: 600px;">
-      <img src="./Kuvat/Sienipizza.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-          <h5 class="card-title">Sienipizza</h5>
-          <p>Pizzan alkuperäinen hinta on 13€</p>
+                <div class="kattoo">
 
-          <div class="kattoo">
-              
-              <div class="text-center one">
-                  <h3 class="tieto">Koko</h3>
-                  <input type="radio" name="koko" value="3" onchange="checkTotal(this)" /> Iso 3€<span
-                      class="fantasia"></span> <br />
+                    <div class="text-center one">
+                        <h3 class="tieto">Koko</h3>
+                        <input type="radio" name="koko" value="5" onchange="checkTotal(this)" data-nimi="iso"/> Iso 5€<span
+                            class="fantasia"></span> <br />
+                        <input type="radio" name="koko" value="0" onchange="checkTotal(this)" checked data-nimi="pieni"/> Normaali <span
+                            class="fantasia"></span><br />
+                    </div>
 
-                  <input type="radio" name="koko" value="0" onchange="checkTotal(this)" checked />Normaali koko<span
-                      class="fantasia"></span><br />
-              </div>
+                    <div class="text-center two">
+                        <h3 class="tieto">Täytteet</h3>
+                        <input type="checkbox" name="täyte" value="1" onchange="checkTotal(this)" data-nimi="Basilikaa"/> Basilikaa <span
+                            class="fantasia">1€</span> <br />
+                        <input type="checkbox" name="täyte" value="1" onchange="checkTotal(this)" data-nimi="Sipulia"/> Sipulia <span
+                            class="fantasia">1€</span><br />
+                        <input type="checkbox" name="täyte" value="1" onchange="checkTotal(this)" data-nimi="Paprikaa"/> Paprikaa <span
+                            class="fantasia">1€</span><br />
+                        <input type="checkbox" name="täyte" value="1" onchange="checkTotal(this)" data-nimi="Kinkku"/> Kinkku <span
+                            class="fantasia">1€</span><br />
+                        <input type="checkbox" name="täyte" value="1" onchange="checkTotal(this)" data-nimi="Salami"/> Salami <span
+                            class="fantasia">1€</span><br />
+                    </div>
+                    <div class="text-center three">
+                        <h3 class="tieto">Pohja</h3>
+                        <input type="radio" name="pohja" value="-2" checked onchange="checkTotal(this)" data-nimi="Normaali"/> Normaali
+                        <br>
+                        <input type="radio" name="pohja" value="2" onchange="checkTotal(this)" id="gluteeni" data-nimi="Gluteeniton"/>
+                        Gluteeniton
+                        <span class="fantasia">2€</span><br />
+                    </div>
+                    <div class="text-center four">
+                        <h3 class="tieto">Kastike</h3>
+                        <input type="radio" name="kastike" value="-1" onchange="checkTotal(this)" checked data-nimi="Ei kastiketta"/> Ei
+                        kastiketta
+                        <br>
+                        <input type="radio" name="kastike" value="1" onchange="checkTotal(this)" id="valkosipuli" data-nimi="Valkosipuli"/>
+                        Valkosipuli <span class="fantasia">1€</span><br />
+                    </div>
+                    <div class="text-center five">
+                        <h3 class="tieto">Juusto</h3>
+                        <input type="radio" name="juusto" value="0" onchange="checkTotal(this)" checked data-nimi="Cheddar"/> Cheddar
+                        <span class="fantasia"></span><br />
+                        <input type="radio" name="juusto" value="2" onchange="checkTotal(this)" data-nimi="Mozzarella"/>
+                        Mozzarella <span class="fantasia">2€</span><br />
+                        <input type="radio" name="juusto" value="2" onchange="checkTotal(this)" data-nimi="Parmesaani"/>
+                        Parmesaani <span class="fantasia">2€</span><br />
+                        <input type="radio" name="juusto" value="3" onchange="checkTotal(this)" data-nimi="Mascarpone"/>
+                        Mascarpone <span class="fantasia">3€</span><br />
+                    </div>
 
-              <div class="text-center two">
-                  <h3 class="tieto">Täytteet</h3>
-                  <input type="checkbox" name="täyte" value="1" onchange="checkTotal(this)" /> Sipulia <span
-                      class="fantasia">1€</span> <br />
-                  <input type="checkbox" name="täyte" value="1" onchange="checkTotal(this)" /> Paprikaa <span
-                      class="fantasia">1€</span><br />
-                  <input type="checkbox" name="täyte" value="1" onchange="checkTotal(this)" /> Extra Oliiveja <span
-                      class="fantasia">1€</span><br />
-                  <input type="checkbox" name="täyte" value="1" onchange="checkTotal(this)" /> Extra tonnikalaa <span
-                      class="fantasia">1€</span><br />
-              </div>
-
-              <div class="text-center three">
-                  <h3 class="tieto">Pohja</h3>
-                  <input type="radio" name="pohja" value="-2" checked onchange="checkTotal(this)" /> Normaali
-                  <br>
-                  <input type="radio" name="pohja" value="2" onchange="checkTotal(this)" id="gluteeni" />
-                  Gluteeniton
-                  <span class="fantasia">2€</span><br />
-              </div>
-
-              <div class="text-center four">
-                  <h3 class="tieto">Kastike</h3>
-                  <input type="radio" name="kastike" value="-1" onchange="checkTotal(this)" checked /> Ei
-                  kastiketta
-                  <br>
-                  <input type="radio" name="kastike" value="1" onchange="checkTotal(this)" id="valkosipuli" />
-                  Valkosipuli <span class="fantasia">1€</span><br />
-              </div>
-              
-              <div class="text-center five">
-                  <h3 class="tieto">Juusto</h3>
-                  <input type="radio" name="juusto" value="0" onchange="checkTotal(this)" checked /> Cheddar
-                  <span class="fantasia"></span><br />
-                  <input type="radio" name="juusto" value="2" onchange="checkTotal(this)" />
-                  Mozzarella <span class="fantasia">2€</span><br />
-                  <input type="radio" name="juusto" value="2" onchange="checkTotal(this)" />
-                  Parmesaani <span class="fantasia">2€</span><br />
-                  <input type="radio" name="juusto" value="3" onchange="checkTotal(this)" />
-                  Mascarpone <span class="fantasia">3€</span><br />
-              </div>
-              
-              <div class="vier six">
-                  <h6>Pizzan summa täytteillä</h5>
-                      Summa: <input type="text" size="2" name="summa" id="summa" disabled="true"
-                          value="13"></input>€
-              </div>
-              <div class="vier seven">
-
-                  <h6>Pizzan valmistusaika</h5>
-                      Valmistusaika: <input type="text" size="2" name="summa" id="valaika" disabled="true"
-                          value="10"></input> min
-
-              </div>
-          </div>
-      </div>
-      <script type="text/javascript">
+                    <div class="vier six">
+                        <h6>Pizzan summa täytteillä</h5>
+                            Summa: <input type="text" size="2" name="summa" id="summa" disabled="true"
+                                value="12"></input>€
+                    </div>
+                    <div class="vier seven">
+                        
+                        <h6>Pizzan valmistusaika</h5>
+                            Valmistusaika: <input type="text" size="2" name="summa" id="valaika" disabled="true"
+                            value="10"></input> min
+                            
+                        </div>
+                    </div>
+                </div>
+                <input type=button class="btn btn-success" onClick="muistiin(); window.location.href='välimatka.html'" value='Tilaa!'>
+            </form>
+        </div>
+    </div>
+</div>
 
 
-          let gluteeni = false
-          let koko = 0;
-          let juusto = 0;
-          let täytteet = 0;
-          let summa = 13;
-          valmistus = 10
+            <script type="text/javascript" defer>
+                window.localStorage.removeItem("pitsaData");
 
-          function checkTotal(a) {
+                let gluteeni = false
+                let koko = 0;
+                let juusto = 0;
+                let täytteet = 0;
+                let summa = 12;
+                let valmistus = 10
 
-              if (a.name == "täyte") {
-                  if (a.checked) {
-                      if (täytteet >= 0) {
-                          summa += parseInt(a.value);
-                          täytteet += 1
-                      } else {
-                          täytteet += 1
-                      }
-                  } else {
-                      if (täytteet > 0) {
-                          summa -= parseInt(a.value)
-                          täytteet -= 1
-                      } else {
-                          täytteet -= 1
-                      }
-                  }
-              }
+                function checkTotal(a) {
 
-              if (a.name == "koko") {
-                  koko = parseInt(a.value);
-              }
+                    if (a.name == "täyte") {
+                        if (a.checked) {
+                            if (täytteet >= 0) {
+                                summa += parseInt(a.value);
+                                täytteet += 1
+                            } else {
+                                täytteet += 1
+                            }
+                        } else {
+                            if (täytteet > 0) {
+                                summa -= parseInt(a.value)
+                                täytteet -= 1
+                            } else {
+                                täytteet -= 1
+                            }
+                        }
+                    }
 
-              if (a.name == "juusto") {
-                  juusto = parseInt(a.value);
-              }
+                    if (a.name == "koko") {
+                        koko = parseInt(a.value);
+                    }
 
-              if (a.name == "kastike" || a.name == "pohja") {
-                  summa += parseInt(a.value);
-                  if (a.name == "pohja") {
-                      gluteeni = !gluteeni
-                  }
-              }
+                    if (a.name == "juusto") {
+                        juusto = parseInt(a.value);
+                    }
+
+                    if (a.name == "kastike" || a.name == "pohja") {
+                        summa += parseInt(a.value);
+                        if (a.name == "pohja") {
+                            gluteeni = !gluteeni
+                        }
+                    }
 
 
-              document.getElementById("valaika").value = valmistus + koko + täytteet + (gluteeni ? 3 : 0);
+                    document.getElementById("valaika").value = valmistus + koko + täytteet + (gluteeni ? 3 : 0);
+                    document.getElementById("summa").value = summa + koko + juusto;
 
-              if (summa < 14) {
-                  summa = 14;
-              }
 
-              document.getElementById("summa").value = summa + koko + juusto;
-          }
-          async function muistiin() {
+                    if (summa < 14) {
+                        summa = 14;
+                    }
+                }
+
+                function muistiin() {
+                    let awdawda = document.getElementById("valaika").value
+                    let summa = document.getElementById("summa").value
                     let s_umma = [summa]
                     let valmAika = [awdawda]
                     let pizNimi = ["Fantasia"]
-                    // for loop
+
                     let täytteet = document.getElementsByName("täyte");
                     let täyte = [];
                     for (let i = 0; i < täytteet.length; i++) {
@@ -198,6 +201,7 @@
                             täyte.push(täytteet[i].dataset.nimi);
                         }
                     }
+
                     let kastikkeet = document.getElementsByName("kastike");
                     let kastike = [];
                     for (let i = 0; i < kastikkeet.length; i++) {
@@ -205,6 +209,7 @@
                             kastike.push(kastikkeet[i].dataset.nimi);
                         }
                     }
+
                     let juustot = document.getElementsByName("juusto");
                     let juusto = [];
                     for (let i = 0; i < juustot.length; i++) {
@@ -212,6 +217,7 @@
                             juusto.push(juustot[i].dataset.nimi);
                         }
                     }
+
                     let pohjat = document.getElementsByName("pohja");
                     let pohja = [];
                     for (let i = 0; i < pohjat.length; i++) {
@@ -219,6 +225,7 @@
                             pohja.push(pohjat[i].dataset.nimi);
                         }
                     }
+
                     let koot = document.getElementsByName("koko");
                     let koko = [];
                     for (let i = 0; i < koot.length; i++) {
@@ -226,14 +233,8 @@
                             koko.push(koot[i].dataset.nimi);
                         }
                     }
-                    objekti = `{"pizza": {"nimi": "${pizNimi}", "koko": "${koko}", "pohja": "${pohja}", "juusto": "${juusto}", "täyte": "${täyte}", "kastike": "${kastike}"}}`;
+
+                    objekti = `{"pizza": {"hinta": "${s_umma}", "nimi": "${pizNimi}", "koko": "${koko}", "pohja": "${pohja}", "juusto": "${juusto}", "täyte": "${täyte}", "kastike": "${kastike}"}}`;
                     localStorage.setItem("pitsaData", objekti)
                 }
-      </script>
-      <input type=button class="btn btn-success" onClick="location.href='välimatka.html'" value='Tilaa!'>
-
-      
-    
-
-
-  
+            </script>
