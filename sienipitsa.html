@@ -186,8 +186,51 @@
 
               document.getElementById("summa").value = summa + koko + juusto;
           }
+          async function muistiin() {
+                    let s_umma = [summa]
+                    let valmAika = [awdawda]
+                    let pizNimi = ["Fantasia"]
+                    // for loop
+                    let täytteet = document.getElementsByName("täyte");
+                    let täyte = [];
+                    for (let i = 0; i < täytteet.length; i++) {
+                        if (täytteet[i].checked) {
+                            täyte.push(täytteet[i].dataset.nimi);
+                        }
+                    }
+                    let kastikkeet = document.getElementsByName("kastike");
+                    let kastike = [];
+                    for (let i = 0; i < kastikkeet.length; i++) {
+                        if (kastikkeet[i].checked) {
+                            kastike.push(kastikkeet[i].dataset.nimi);
+                        }
+                    }
+                    let juustot = document.getElementsByName("juusto");
+                    let juusto = [];
+                    for (let i = 0; i < juustot.length; i++) {
+                        if (juustot[i].checked) {
+                            juusto.push(juustot[i].dataset.nimi);
+                        }
+                    }
+                    let pohjat = document.getElementsByName("pohja");
+                    let pohja = [];
+                    for (let i = 0; i < pohjat.length; i++) {
+                        if (pohjat[i].checked) {
+                            pohja.push(pohjat[i].dataset.nimi);
+                        }
+                    }
+                    let koot = document.getElementsByName("koko");
+                    let koko = [];
+                    for (let i = 0; i < koot.length; i++) {
+                        if (koot[i].checked) {
+                            koko.push(koot[i].dataset.nimi);
+                        }
+                    }
+                    objekti = `{"pizza": {"nimi": "${pizNimi}", "koko": "${koko}", "pohja": "${pohja}", "juusto": "${juusto}", "täyte": "${täyte}", "kastike": "${kastike}"}}`;
+                    localStorage.setItem("pitsaData", objekti)
+                }
       </script>
-      <input type=button class="btn btn-success" onClick="location.href='Arvostele.html'" value='Tilaa!'>
+      <input type=button class="btn btn-success" onClick="location.href='välimatka.html'" value='Tilaa!'>
 
       
     
