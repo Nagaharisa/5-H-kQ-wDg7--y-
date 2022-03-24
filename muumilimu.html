@@ -21,15 +21,15 @@
         <p class="card-text">Kylmä juoma</p>
         <form name="listForm">
           <div class="text-center">
-            <select name="user" id="userID" size="3">
-                <option>Sitruuna</option>
-                <option>Päärynä</option>
-                <option>Mansikka</option>
-              </select>
+            <input type="radio" name="choice" value="0€" onchange="checkTotal()"/>Mansikka 2€<br/>
+            <input type="radio" name="choice" value="0€" onchange="checkTotal()"/>Päärynä 2€<br/>
+            <input type="radio" name="choice" value="0€" onchange="checkTotal()"/>Omena 2€<br/>
+                
+            
           </div>
         <div class="mt-3 text-center ">
             <h6>Juoman summa</h5>
-            Summa: <input type="text" size="1" name="total" value="2€">€</input>
+            Summa: <input type="text" size="1" name="total" disabled="true" value="€">€</input>
           </div>
         </form>
       </div>
@@ -46,6 +46,6 @@
           document.listForm.total.value = sum;
         }
       </script>
-       <input type=button class="btn btn-success"onClick="location.href='välimatka.html'"
+       <input type=button class="btn btn-success"onClick="location.href='Arvostele.html'"
        value='Tilaa!'>
        
