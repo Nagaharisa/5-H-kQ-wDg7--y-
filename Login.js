@@ -12,7 +12,6 @@ async function häsh(häshättävä) {
 
 async function onkoKirjautunut() {
     if (window.location.pathname == "/kirjautuminen.html") {
-
         document.getElementById("nimi").value = localStorage.getItem("nimi");
         document.getElementById("salasana").value = "";
     }
@@ -26,7 +25,6 @@ async function onkoKirjautunut() {
         document.getElementById("roope").style.display = "block";
         document.getElementById("kirjauduUlos").style.display = "block";
         document.getElementById("kirjaudu").style.display = "none";
-
     } else {
         document.getElementById("kirjaudu").style.display = "block";
         document.getElementById("roope").style.display = "none";
@@ -47,7 +45,7 @@ async function kirjaudu() {
         (await häsh(document.getElementById("salasana").value)) ==
             localStorage.getItem("salasana")
     ) {
-        window.location.href = "kotisivu.html";
+        window.location.href = "Kotisivu.html";
         localStorage.setItem("kirjautunut", "true");
     } else {
         alert("Nimi tai salasana on väärin!");
@@ -69,7 +67,7 @@ async function rekisteröidy() {
                 await häsh(document.getElementById("salasana").value)
             );
             localStorage.setItem("kirjautunut", true);
-            window.location.href = "kotisivu.html";
+            window.location.href = "Kotisivu.html";
         } else {
             alert("Anna nimi ja salasana");
         }
@@ -77,3 +75,4 @@ async function rekisteröidy() {
 
     reg = 1;
 }
+
