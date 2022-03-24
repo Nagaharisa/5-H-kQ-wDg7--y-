@@ -1,6 +1,7 @@
 async function välimatka(osoite) {
     onnistu = false;
     let valimatka = 0.0;
+    let toimAika = 0;
 
     let res = await fetch(
         `http://api.positionstack.com/v1/forward?access_key=9d0974d5f694e55ec3d9320c7090a60d&country=FI&limit=50&query=${encodeURIComponent(
@@ -26,12 +27,30 @@ async function välimatka(osoite) {
         document.getElementById("välimatka_").style.display = "none";
         document.getElementById("välimatkaKusi").style.display = "block";
         return;
-        
     }
 
+    if (valimatka > 20) {
+        document.getElementById("välimatka_").style.display = "none";
+        document.getElementById("välimatkaKusi").style.display = "none";
+        document.getElementById("välimatkaKusi2").style.display = "block";
+        return;
+    }
+
+    if (valimatka > 0) {
+        toimAika = 5;
+    }
+    if (valimatka > 3) {
+        toimAika = 10;
+    }
+    if (valimatka > 10) {
+        toimAika = 20;
+    }
+
+    document.getElementById("välimatkaKusi2").style.display = "none";
     document.getElementById("välimatka").innerText = valimatka.toFixed(2);
     document.getElementById("välimatka_").style.display = "block";
     document.getElementById("välimatkaKusi").style.display = "none";
+    document.getElementById("toimitusAika").innerText = toimAika;
 }
 
 async function distance(lat1, lon1, lat2, lon2) {

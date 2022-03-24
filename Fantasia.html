@@ -67,64 +67,64 @@
 
                     <div class="text-center one">
                         <h3 class="tieto">Koko</h3>
-                        <input type="radio" name="koko" value="3" onchange="checkTotal(this)" /> Iso 3€<span
+                        <input type="radio" name="koko" value="3" onchange="checkTotal(this)" data-nimi="iso"/> Iso 3€<span
                             class="fantasia"></span> <br />
-                        <input type="radio" name="koko" value="2" onchange="checkTotal(this)" /> Normaali 2€<span
+                        <input type="radio" name="koko" value="2" onchange="checkTotal(this)" data-nimi="normaali"/> Normaali 2€<span
                             class="fantasia"></span><br />
-                        <input type="radio" name="koko" value="1" onchange="checkTotal(this)" checked /> Pieni 1€<span
+                        <input type="radio" name="koko" value="1" onchange="checkTotal(this)" checked data-nimi="pieni"/> Pieni 1€<span
                             class="fantasia"></span><br />
                     </div>
 
                     <div class="text-center two">
                         <h3 class="tieto">Täytteet</h3>
-                        <input type="checkbox" name="täyte" value="1" onchange="checkTotal(this)" /> Basilikaa <span
+                        <input type="checkbox" name="täyte" value="1" onchange="checkTotal(this)" data-nimi="Basilikaa"/> Basilikaa <span
                             class="fantasia">1€</span> <br />
-                        <input type="checkbox" name="täyte" value="1" onchange="checkTotal(this)" /> Sipulia <span
+                        <input type="checkbox" name="täyte" value="1" onchange="checkTotal(this)" data-nimi="Sipulia"/> Sipulia <span
                             class="fantasia">1€</span><br />
-                        <input type="checkbox" name="täyte" value="1" onchange="checkTotal(this)" /> Paprikaa <span
+                        <input type="checkbox" name="täyte" value="1" onchange="checkTotal(this)" data-nimi="Paprikaa"/> Paprikaa <span
                             class="fantasia">1€</span><br />
-                        <input type="checkbox" name="täyte" value="1" onchange="checkTotal(this)" /> Kinkku <span
+                        <input type="checkbox" name="täyte" value="1" onchange="checkTotal(this)" data-nimi="Kinkku"/> Kinkku <span
                             class="fantasia">1€</span><br />
-                        <input type="checkbox" name="täyte" value="1" onchange="checkTotal(this)" /> Salami <span
+                        <input type="checkbox" name="täyte" value="1" onchange="checkTotal(this)" data-nimi="Salami"/> Salami <span
                             class="fantasia">1€</span><br />
-                        <input type="checkbox" name="täyte" value="1" onchange="checkTotal(this)" /> Kebab <span
+                        <input type="checkbox" name="täyte" value="1" onchange="checkTotal(this)" data-nimi="Kebab"/> Kebab <span
                             class="fantasia">1€</span><br />
-                        <input type="checkbox" name="täyte" value="1" onchange="checkTotal(this)" /> Valkosipuli <span
+                        <input type="checkbox" name="täyte" value="1" onchange="checkTotal(this)" data-nimi="Valkosipuli"/> Valkosipuli <span
                             class="fantasia">1€</span><br />
-                        <input type="checkbox" name="täyte" value="1" onchange="checkTotal(this)" /> Sinihomejuusto
+                        <input type="checkbox" name="täyte" value="1" onchange="checkTotal(this)" data-nimi="Sinihomejuusto"/> Sinihomejuusto
                         <span class="fantasia">1€</span><br />
-                        <input type="checkbox" name="täyte" value="1" onchange="checkTotal(this)" /> Pekoni <span
+                        <input type="checkbox" name="täyte" value="1" onchange="checkTotal(this)" data-nimi="Pekoni"/> Pekoni <span
                             class="fantasia">1€</span><br />
-                        <input type="checkbox" name="täyte" value="1" onchange="checkTotal(this)" /> Jäävuorisalaatti
+                        <input type="checkbox" name="täyte" value="1" onchange="checkTotal(this)" data-nimi="Jäävuorisalaatti"/> Jäävuorisalaatti
                         <span class="fantasia">1€</span><br />
-                        <input type="checkbox" name="täyte" value="1" onchange="checkTotal(this)" /> Makkara <span
+                        <input type="checkbox" name="täyte" value="1" onchange="checkTotal(this)" data-nimi="Makkara"/> Makkara <span
                             class="fantasia">1€</span><br />
                     </div>
                     <div class="text-center three">
                         <h3 class="tieto">Pohja</h3>
-                        <input type="radio" name="pohja" value="-2" checked onchange="checkTotal(this)" /> Normaali
+                        <input type="radio" name="pohja" value="-2" checked onchange="checkTotal(this)" data-nimi="Normaali"/> Normaali
                         <br>
-                        <input type="radio" name="pohja" value="2" onchange="checkTotal(this)" id="gluteeni" />
+                        <input type="radio" name="pohja" value="2" onchange="checkTotal(this)" id="gluteeni" data-nimi="Gluteeniton"/>
                         Gluteeniton
                         <span class="fantasia">2€</span><br />
                     </div>
                     <div class="text-center four">
                         <h3 class="tieto">Kastike</h3>
-                        <input type="radio" name="kastike" value="-1" onchange="checkTotal(this)" checked /> Ei
+                        <input type="radio" name="kastike" value="-1" onchange="checkTotal(this)" checked data-nimi="Ei kastiketta"/> Ei
                         kastiketta
                         <br>
-                        <input type="radio" name="kastike" value="1" onchange="checkTotal(this)" id="valkosipuli" />
+                        <input type="radio" name="kastike" value="1" onchange="checkTotal(this)" id="valkosipuli" data-nimi="Valkosipuli"/>
                         Valkosipuli <span class="fantasia">1€</span><br />
                     </div>
                     <div class="text-center five">
                         <h3 class="tieto">Juusto</h3>
-                        <input type="radio" name="juusto" value="0" onchange="checkTotal(this)" checked /> Cheddar
+                        <input type="radio" name="juusto" value="0" onchange="checkTotal(this)" checked data-nimi="Cheddar"/> Cheddar
                         <span class="fantasia"></span><br />
-                        <input type="radio" name="juusto" value="2" onchange="checkTotal(this)" />
+                        <input type="radio" name="juusto" value="2" onchange="checkTotal(this)" data-nimi="Mozzarella"/>
                         Mozzarella <span class="fantasia">2€</span><br />
-                        <input type="radio" name="juusto" value="2" onchange="checkTotal(this)" />
+                        <input type="radio" name="juusto" value="2" onchange="checkTotal(this)" data-nimi="Parmesaani"/>
                         Parmesaani <span class="fantasia">2€</span><br />
-                        <input type="radio" name="juusto" value="3" onchange="checkTotal(this)" />
+                        <input type="radio" name="juusto" value="3" onchange="checkTotal(this)" data-nimi="Mascarpone"/>
                         Mascarpone <span class="fantasia">3€</span><br />
                     </div>
 
@@ -134,16 +134,17 @@
                                 value="15"></input>€
                     </div>
                     <div class="vier seven">
-
+                        
                         <h6>Pizzan valmistusaika</h5>
                             Valmistusaika: <input type="text" size="2" name="summa" id="valaika" disabled="true"
-                                value="7"></input> min
-
+                            value="7"></input> min
+                            
+                        </div>
                     </div>
                 </div>
-            </div>
+                <input type=button class="btn btn-success" onClick="muistiin(); window.location.href='välimatka.html'" value='Tilaa!'>
             <script type="text/javascript">
-
+                window.localStorage.removeItem("pitsaData");
 
                 let gluteeni = false
                 let koko = 0;
@@ -196,5 +197,47 @@
 
                     document.getElementById("summa").value = summa + koko + juusto;
                 }
+                async function muistiin() {
+                    let s_umma = [summa]
+                    let valmAika = [awdawda]
+                    let pizNimi = ["Fantasia"]
+                    // for loop
+                    let täytteet = document.getElementsByName("täyte");
+                    let täyte = [];
+                    for (let i = 0; i < täytteet.length; i++) {
+                        if (täytteet[i].checked) {
+                            täyte.push(täytteet[i].dataset.nimi);
+                        }
+                    }
+                    let kastikkeet = document.getElementsByName("kastike");
+                    let kastike = [];
+                    for (let i = 0; i < kastikkeet.length; i++) {
+                        if (kastikkeet[i].checked) {
+                            kastike.push(kastikkeet[i].dataset.nimi);
+                        }
+                    }
+                    let juustot = document.getElementsByName("juusto");
+                    let juusto = [];
+                    for (let i = 0; i < juustot.length; i++) {
+                        if (juustot[i].checked) {
+                            juusto.push(juustot[i].dataset.nimi);
+                        }
+                    }
+                    let pohjat = document.getElementsByName("pohja");
+                    let pohja = [];
+                    for (let i = 0; i < pohjat.length; i++) {
+                        if (pohjat[i].checked) {
+                            pohja.push(pohjat[i].dataset.nimi);
+                        }
+                    }
+                    let koot = document.getElementsByName("koko");
+                    let koko = [];
+                    for (let i = 0; i < koot.length; i++) {
+                        if (koot[i].checked) {
+                            koko.push(koot[i].dataset.nimi);
+                        }
+                    }
+                    objekti = `{"pizza": {"nimi": "${pizNimi}", "koko": "${koko}", "pohja": "${pohja}", "juusto": "${juusto}", "täyte": "${täyte}", "kastike": "${kastike}"}}`;
+                    localStorage.setItem("pitsaData", objekti)
+                }
             </script>
-            <input type=button class="btn btn-success" onClick="location.href='Arvostele.html'" value='Tilaa!'>
